@@ -1,0 +1,23 @@
+{
+  "name": "deepphi",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "changgyun.woo <cg25.woo@samsung.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/gyoon/deepphi",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "fullpage.js": "~2.9.3"
+  }
+}
