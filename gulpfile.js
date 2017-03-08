@@ -20,7 +20,7 @@ var gulp = require ('gulp'),
 
 var target = {
     htmlSrc : 'app/index.html',
-    sassSrc : 'app/scss/app.scss',
+    sassSrc : 'app/scss/**/*.scss',
     resourceSrc : 'app/resource/**/*',
     jsSrc : 'app/js/**/*',
     htmlDest : 'dist/',
@@ -135,10 +135,10 @@ gulp.slurped = false; // step 1
 gulp.task("watch", function(){
     if(!gulp.slurped){ // step 2
         gulp.watch(['gulpfile.js'], ['serve']);
-        gulp.watch(target.sassSrc, ['sass']);
-        gulp.watch(target.resourceSrc, ['resource']);
-        gulp.watch(target.jsSrc, ['javascript']);
-        gulp.watch(target.htmlSrc, ['html']);
+        gulp.watch(target.sassSrc, ['sass', 'inject']);
+        gulp.watch(target.resourceSrc, ['resource', 'inject']);
+        gulp.watch(target.jsSrc, ['javascript', 'inject']);
+        gulp.watch(target.htmlSrc, ['html', 'inject']);
         gulp.slurped = true; // step 3
     }
 });

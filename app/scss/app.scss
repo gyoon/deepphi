@@ -1,2 +1,6 @@
 @import "base/_reset";
-div {font-size: 15px; }
+@import "base/_font";
+
+@import "layout/_header";
+@import "layout/_home";
+@import "layout/_about";
