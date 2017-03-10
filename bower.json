@@ -16,8 +16,12 @@
     "test",
     "tests"
   ],
-  "devDependencies": {},
+  "devDependencies": {
+    "remodal": "^1.1.1"
+  },
   "dependencies": {
-    "fullpage.js": "~2.9.3"
+    "fullpage.js": "~2.9.3",
+    "slick-carousel": "^1.6.0",
+    "remodal": "^1.1.1"
   }
 }

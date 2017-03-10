@@ -1,10 +1,6 @@
-.about {
-  background-image: url("../resource/images/about.png");
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
+.demo {
   position: relative;
-  //background-color: #def2fd;
+  background-color: #eaeaea;
   .title {
     text-align: center;
     color: #000c1f;
@@ -16,8 +12,8 @@
   }
 }
 
-.fp-viewing-1 {
-  .about {
+.fp-viewing-2 {
+  .demo {
     .title {
       transform: translate(0px, -200px);
       opacity: 1;
