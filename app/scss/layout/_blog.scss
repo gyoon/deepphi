@@ -1,5 +1,5 @@
 .blog {
-  background-image: url("../resource/images/blog.png");
+  background-image: url("../source/images/blog.png");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -33,11 +33,11 @@
   margin: 0 20px;
   box-shadow: 5px 0 5px rgba(0, 0, 0, .10);
   cursor: pointer;
-  background-image: url("../resource/images/blogPlusOff.png");
+  background-image: url("../source/images/blogPlusOff.png");
   background-position: center 95%;
   background-repeat: no-repeat;
   &:hover {
-    background-image: url("../resource/images/blogPlusOn.png");
+    background-image: url("../source/images/blogPlusOn.png");
     h3 {
       color: #006cb8;
     }

@@ -21,12 +21,12 @@ var gulp = require ('gulp'),
 var target = {
     htmlSrc : 'app/index.html',
     sassSrc : 'app/scss/**/*.scss',
-    resourceSrc : 'app/resource/**/*',
+    resourceSrc : 'app/source/**/*',
     jsSrc : 'app/js/**/*',
     htmlDest : 'dist/',
     cssDest : 'dist/css',
     jsDest : 'dist/js',
-    resourceDest : 'dist/resource',
+    resourceDest : 'dist/source',
     fontDest : 'dist/font',
     dest : 'dist/'
 };

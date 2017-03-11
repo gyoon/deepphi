@@ -1,5 +1,5 @@
 .contact {
-  background-image: url("../resource/images/contact.png");
+  background-image: url("../source/images/contact.png");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -118,21 +118,21 @@
       &.phone {
         content: '';
         display: inline-block;
-        background-image: url("../resource/images/phone.png");
+        background-image: url("../source/images/phone.png");
         background-repeat: no-repeat;
         background-position: center;
       }
       &.map {
         content: '';
         display: inline-block;
-        background-image: url("../resource/images/map.png");
+        background-image: url("../source/images/map.png");
         background-repeat: no-repeat;
         background-position: center;
       }
       &.mail {
         content: '';
         display: inline-block;
-        background-image: url("../resource/images/mail.png");
+        background-image: url("../source/images/mail.png");
         background-repeat: no-repeat;
         background-position: center;
       }

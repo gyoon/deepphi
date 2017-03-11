@@ -7,15 +7,55 @@
     font-size: 58px;
     span {font-weight: bold}
     transition: .9s cubic-bezier(.4,.38,0,1.19);
-    transform: translate(0px, 200px);
     opacity: 0;
   }
+  .desc {
+    text-align: center;
+    color: #262626;
+    font-size: 22px;
+    transition: 1.2s cubic-bezier(.4,.38,0,1.19);
+    transform: translate(0px, 300px);
+    opacity: 0;
+    span {color: #006cb8}
+  }
+
+  .upload {
+    transition: 1.4s cubic-bezier(.4,.38,0,1.19);
+    transform: translate(0px, 200px);
+    opacity: 0;
+    width: 80%;
+    max-width: 1250px;
+    margin: 0px auto;
+    display: flex;
+    .fine-uploader-gallery {
+      width: 100%;
+      margin-right: 10px;
+      padding: 8px;
+      background-color: #ffffff;
+    }
+    .upload-view {
+      flex: 0 0 800px;
+      width: 800px;
+      height: 460px;
+      border: 1px #c8c8c8 solid;
+      background-image: url("../source/images/upload_default.png");
+    }
+  }
+
 }
 
 .fp-viewing-2 {
   .demo {
     .title {
-      transform: translate(0px, -200px);
+      transform: translate(0px, -150px);
+      opacity: 1;
+    }
+    .desc {
+      transform: translate(0px, -100px);
+      opacity: 1;
+    }
+    .upload {
+      transform: translate(0px, 0px);
       opacity: 1;
     }
   }

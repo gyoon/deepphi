@@ -22,6 +22,7 @@
   "dependencies": {
     "fullpage.js": "~2.9.3",
     "slick-carousel": "^1.6.0",
-    "remodal": "^1.1.1"
+    "remodal": "^1.1.1",
+    "fine-uploader": "^5.13.0"
   }
 }

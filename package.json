@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "build": "gulp",
-    "inst": "bower install"
+    "inst": "bower install",
+    "clean": "gulp clean"
   },
   "repository": {
     "type": "git",

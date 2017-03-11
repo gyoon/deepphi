@@ -2,7 +2,7 @@
 /* Slider */
 .slick-loading .slick-list
 {
-  background: #fff url('./ajax-loader.gif') center center no-repeat;
+  background: #fff url('../source/images/ajax-loader.gif') center center no-repeat;
 }
 
 /* Icons */
@@ -80,7 +80,7 @@
 {
   content: '';
   display: inline-block;
-  background-image: url("../resource/images/arrLeft.png");
+  background-image: url("../source/images/arrLeft.png");
   background-repeat: no-repeat;
   width: 36px;
   height: 62px;
@@ -105,7 +105,7 @@
 {
   content: '';
   display: inline-block;
-  background-image: url("../resource/images/arrRight.png");
+  background-image: url("../source/images/arrRight.png");
   background-repeat: no-repeat;
   width: 36px;
   height: 62px;
