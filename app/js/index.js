@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    //page
     $('#fullpage').fullpage({
         anchors: ['home', 'about', 'demo', 'service', 'blog', 'contact'],
         menu: '#menu',
@@ -7,6 +8,7 @@ $(document).ready(function() {
     });
 
 
+    //blog
     $('.autoplay').slick({
         slidesToShow: 3,
         //dots: true,
@@ -15,6 +17,7 @@ $(document).ready(function() {
     });
 
 
+    ///demo
     $('#fine-uploader-gallery').fineUploader({
         template: 'qq-template-gallery',
         request: {
@@ -54,6 +57,18 @@ $(document).ready(function() {
         }, 4000);
     })
 
+
+    //burger
+    var burger = $('.menu-trigger');
+
+    burger.each(function(index){
+        var $this = $(this);
+
+        $this.on('click', function(e){
+            e.preventDefault();
+            $(this).toggleClass('active-' + (index+1));
+        })
+    });
 
 
 });
