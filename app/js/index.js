@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
-    $('#fullpage').fullpage();
+    $('#fullpage').fullpage({
+        anchors: ['home', 'about', 'demo', 'service', 'blog', 'contact'],
+        menu: '#menu',
+        css3: true
+    });
 
 
     $('.autoplay').slick({
@@ -26,6 +30,31 @@ $(document).ready(function() {
             allowedExtensions: ['jpeg', 'jpg', 'gif', 'png']
         }
     });
+
+
+    $( ".qq-upload-button" ).click(function() {
+        setTimeout(function () {
+
+            $(".progress").css('opacity', 1);
+
+            $('.progress .bar').animate({
+                    opacity: 1,
+                    width: 330,
+                    percent: 100
+                },
+                {
+                    complete: function(){
+                        $(".progress").css('display', 'none');
+                        $(".default").css('display', 'none');
+                        $(".upcomp").css('display', 'block');
+                    }
+                }
+            );
+
+        }, 4000);
+    })
+
+
 
 });
 

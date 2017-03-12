@@ -4,7 +4,8 @@
     background-color: rgba(255, 255, 255, .4);
     border-bottom: 1px #fff solid;
     box-shadow: 1px 0 7px rgba(0, 0, 0, .11);
-    h1 {
+    .logo {
+      display: block;
       background-image: url("../source/images/logo.png");
       width: 340px;
       height: 66px;
@@ -26,7 +27,8 @@
   z-index: 100;
   width: 100%;
   transition: .6s cubic-bezier(.4,.38,0,1.19);
-  h1 {
+  .logo {
+    display: block;
     background-image: url("../source/images/logo.png");
     width: 234px;
     height: 46px;
@@ -51,5 +53,31 @@
         }
       }
     }
+  }
+}
+
+.fp-viewing-about {
+  .gnb li {
+    &:nth-of-type(1) a {color: #006cb8;}
+  }
+}
+.fp-viewing-demo {
+  .gnb li {
+    &:nth-of-type(2) a {color: #006cb8;}
+  }
+}
+.fp-viewing-service {
+  .gnb li {
+    &:nth-of-type(3) a {color: #006cb8;}
+  }
+}
+.fp-viewing-blog {
+  .gnb li {
+    &:nth-of-type(4) a {color: #006cb8;}
+  }
+}
+.fp-viewing-contact {
+  .gnb li {
+    &:nth-of-type(5) a {color: #006cb8;}
   }
 }

@@ -15,20 +15,20 @@
 </head>
 <body>
     <div class="header">
-        <h1 class="logo"></h1>
+        <h1><a href="#home" class="logo"></a></h1>
         <nav>
             <ul class="gnb">
-                <li><a href="">about</a></li>
-                <li><a href="">demo</a></li>
-                <li><a href="">service</a></li>
-                <li><a href="">blog</a></li>
-                <li><a href="">contact</a></li>
+                <li data-menuanchor="about"><a href="#about">about</a></li>
+                <li data-menuanchor="demo"><a href="#demo">demo</a></li>
+                <li data-menuanchor="service"><a href="#service">service</a></li>
+                <li data-menuanchor="blog"><a href="#blog">blog</a></li>
+                <li data-menuanchor="contact"><a href="#contact">contact</a></li>
             </ul>
         </nav>
     </div>
     <div id="fullpage">
 
-        <div class="section home">
+        <div class="section home" data-anchor="home">
             <div class="uiHand"></div>
             <div class="homeDesc">
                 We are leading smart <br class="onlyPc">
@@ -38,11 +38,11 @@
             <div class="mouse">Scroll</div>
         </div>
 
-        <div class="section about">
+        <div class="section about" data-anchor="about">
             <div class="title">DEEP:PHI is very <span>Easy&Fast</span></div>
         </div>
 
-        <div class="section demo">
+        <div class="section demo" data-anchor="demo">
             <div class="title">Demo</div>
             <div class="desc">파노라마 이미지를 등록하시고, <span>자동판독</span>을 경험해보세요!</div>
 
@@ -50,11 +50,21 @@
                 <div class="fine-uploader-gallery">
                     <div id="fine-uploader-gallery"></div>
                 </div>
-                <div class="upload-view">yrdy</div>
+                <div class="upload-view">
+                    <div class="default">자동판독을 경험해보세요!</div>
+                    <div class="progress">
+                        <span class="bar" style="width: 50%"></span>
+                    </div>
+                    <img class="upcomp" src="source/images/esp.png">
+                </div>
             </div>
         </div>
 
-        <div class="section blog">
+        <div class="section service" data-anchor="service">
+            <div class="title">Service</div>
+        </div>
+
+        <div class="section blog" data-anchor="blog">
             <div class="title">Blog</div>
 
             <div class="slider autoplay">
@@ -95,7 +105,7 @@
 
         </div>
 
-        <div class="section contact">
+        <div class="section contact" data-anchor="contact">
             <div class="title">Contact</div>
             <div class="desc">서비스에 대해 궁금한 사항이 있으시면 글을 보내주세요. 빠른시간안에 확인하여 연락드리겠습니다.</div>
 
@@ -164,22 +174,25 @@
                 <span>Processing dropped files...</span>
                 <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
             </span>
+
+            <div class="upload-text">
+                <span>Drop files to upload</span>
+                or
+            </div>
+
+            <div class="qq-upload-button-selector qq-upload-button">
+                <div>Upload a file</div>
+            </div>
+
             <ul class="qq-upload-list-selector qq-upload-list" role="region" aria-live="polite" aria-relevant="additions removals">
                 <li>
-                    <span role="status" class="qq-upload-status-text-selector qq-upload-status-text"></span>
-                    <div class="qq-progress-bar-container-selector qq-progress-bar-container">
+                    <!--<div class="qq-progress-bar-container-selector qq-progress-bar-container">
                         <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-progress-bar-selector qq-progress-bar"></div>
-                    </div>
+                    </div>-->
                     <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
-                    <div class="qq-thumbnail-wrapper">
+                    <!--=<div class="qq-thumbnail-wrapper">
                         <img class="qq-thumbnail-selector" qq-max-size="120" qq-server-scale>
-                    </div>
-                    <button type="button" class="qq-upload-cancel-selector qq-upload-cancel">X</button>
-                    <button type="button" class="qq-upload-retry-selector qq-upload-retry">
-                        <span class="qq-btn qq-retry-icon" aria-label="Retry"></span>
-                        Retry
-                    </button>
-
+                    </div>-->
                     <div class="qq-file-info">
                         <div class="qq-file-name">
                             <span class="qq-upload-file-selector qq-upload-file"></span>
@@ -187,48 +200,9 @@
                         </div>
                         <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
                         <span class="qq-upload-size-selector qq-upload-size"></span>
-                        <button type="button" class="qq-btn qq-upload-delete-selector qq-upload-delete">
-                            <span class="qq-btn qq-delete-icon" aria-label="Delete"></span>
-                        </button>
-                        <button type="button" class="qq-btn qq-upload-pause-selector qq-upload-pause">
-                            <span class="qq-btn qq-pause-icon" aria-label="Pause"></span>
-                        </button>
-                        <button type="button" class="qq-btn qq-upload-continue-selector qq-upload-continue">
-                            <span class="qq-btn qq-continue-icon" aria-label="Continue"></span>
-                        </button>
                     </div>
                 </li>
             </ul>
-
-            Drop files to upload<br>
-            or<br>
-            <div class="qq-upload-button-selector qq-upload-button">
-                <div>Upload a file</div>
-            </div>
-
-            <dialog class="qq-alert-dialog-selector">
-                <div class="qq-dialog-message-selector"></div>
-                <div class="qq-dialog-buttons">
-                    <button type="button" class="qq-cancel-button-selector">Close</button>
-                </div>
-            </dialog>
-
-            <dialog class="qq-confirm-dialog-selector">
-                <div class="qq-dialog-message-selector"></div>
-                <div class="qq-dialog-buttons">
-                    <button type="button" class="qq-cancel-button-selector">No</button>
-                    <button type="button" class="qq-ok-button-selector">Yes</button>
-                </div>
-            </dialog>
-
-            <dialog class="qq-prompt-dialog-selector">
-                <div class="qq-dialog-message-selector"></div>
-                <input type="text">
-                <div class="qq-dialog-buttons">
-                    <button type="button" class="qq-cancel-button-selector">Cancel</button>
-                    <button type="button" class="qq-ok-button-selector">Ok</button>
-                </div>
-            </dialog>
         </div>
     </script>
 </body>
