@@ -8,13 +8,42 @@ $(document).ready(function() {
     });
 
 
+
     //blog
     $('.autoplay').slick({
         slidesToShow: 3,
         //dots: true,
         slidesToScroll: 1,
-        autoplay: false
+        autoplay: false,
+        responsive: [
+            {
+                breakpoint: 980,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true
+                }
+            }
+        ]
     });
+    /*var isMobile = $(window).width();
+    function blogInit() {
+        if(isMobile < 980) {
+
+        } else {
+
+        }
+    }
+     blogInit();
+
+     $( window ).resize(function() {
+     $('.autoplay').slick('unslick');
+     blogInit();
+     });
+    */
+
+
 
 
     ///demo

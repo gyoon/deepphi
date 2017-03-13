@@ -22,7 +22,7 @@
   opacity: 0;
   width: 80%;
   max-width: 1250px;
-  margin: 100px auto 0 auto;
+  margin: 0px auto 0 auto;
 }
 
 .sliderItem {
@@ -62,12 +62,13 @@
 .fp-viewing-blog {
   .blog {
     .title {
-      transform: translate(0px, 0px);
+      transform: translate(0px, -90px);
       opacity: 1;
     }
     .slider {
-      transform: translate(0px, 0px);
+      transform: translate(0px, -40px);
       opacity: 1;
+      margin-bottom: 0;
     }
   }
 }

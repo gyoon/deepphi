@@ -22,6 +22,7 @@
     transition: 1.2s cubic-bezier(.4,.38,0,1.19);
     transform: translate(0px, 300px);
     opacity: 0;
+    line-height: 160%;
   }
 
   .sendForm {
@@ -152,11 +153,11 @@
 .fp-viewing-contact {
   .contact {
     .title {
-      transform: translate(0px, -150px);
+      transform: translate(0px, 0px);
       opacity: 1;
     }
     .desc {
-      transform: translate(0px, -100px);
+      transform: translate(0px, 0px);
       opacity: 1;
     }
     .sendForm {

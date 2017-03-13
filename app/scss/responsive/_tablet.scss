@@ -93,6 +93,41 @@
     line-height: 160%;
   }
 
+  .fine-uploader-gallery {
+    position: absolute;
+    margin: 0;
+    top: 480px;
+  }
+
+  .demo .upload .upload-view {
+    flex: 100%;
+    width: 100%;
+  }
+
+  .contact {
+    .sendForm {
+      flex-direction: column;
+      width: 90%;
+      .textType  {
+        padding: 0;
+        width: inherit;
+        input {margin: 5px 0}
+      }
+      .areaType {
+        padding: 0;
+        width: inherit;
+        textarea {margin: 5px 0}
+      }
+    }
+    .footer {
+      padding: 0 10px;
+      height: 100px;
+      li {
+        transform: scale(.8);
+      }
+    }
+  }
+
   .fp-viewing-home {
     .homeDesc {
       position: absolute;
