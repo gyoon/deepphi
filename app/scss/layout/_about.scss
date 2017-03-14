@@ -9,9 +9,8 @@
     text-align: center;
     color: #000c1f;
     font-size: 58px;
-    span {font-weight: bold}
+    span {font-weight: bold; font-size: 58px;}
     transition: .9s cubic-bezier(.4,.38,0,1.19);
-    transform: translate(0px, 200px);
     opacity: 0;
   }
 }
@@ -19,7 +18,6 @@
 .fp-viewing-about {
   .about {
     .title {
-      transform: translate(0px, -90px);
       opacity: 1;
     }
   }

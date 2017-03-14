@@ -58,26 +58,96 @@
 
 .fp-viewing-about {
   .gnb li {
-    &:nth-of-type(1) a {color: #006cb8;}
+    &:nth-of-type(1) a {
+      color: #006cb8;
+    }
+  }
+  .about {
+    .title {
+      transform: translate(0px, 0px);
+    }
   }
 }
+
 .fp-viewing-demo {
   .gnb li {
     &:nth-of-type(2) a {color: #006cb8;}
+  }
+  .demo {
+    .title {
+      transform: translate(0px, 0px);
+    }
+    .desc {
+      transform: translate(0px, 0px);
+    }
+    .upload {
+      transform: translate(0px, 0px);
+    }
   }
 }
 .fp-viewing-service {
   .gnb li {
     &:nth-of-type(3) a {color: #006cb8;}
   }
+  .service {
+    .title {
+      transform: translate(0px, 0px);
+    }
+    .desc {
+      transform: translate(0px, 0px);
+    }
+  }
 }
 .fp-viewing-blog {
   .gnb li {
     &:nth-of-type(4) a {color: #006cb8;}
   }
+  .blog {
+    .title {
+      transform: translate(0px, 0px);
+    }
+    .slider {
+      transform: translate(0px, 0px);
+    }
+  }
 }
 .fp-viewing-contact {
   .gnb li {
     &:nth-of-type(5) a {color: #006cb8;}
+  }
+  .contact {
+    .title {
+      transform: translate(0px, 0px);
+    }
+    .desc {
+      transform: translate(0px, 0px);
+    }
+    .sendForm {
+      transform: translate(0px, 0px);
+    }
+  }
+}
+
+.fp-tableCell {
+  vertical-align: inherit;
+}
+
+.about, .demo, .service, .blog, .contact {
+  .title {
+     margin-top: 160px;
+     transform: translate(0px, 200px);
+   }
+  .desc {
+    margin-top: 40px;
+    transform: translate(0px, 200px);
+  }
+  .upload {
+    transform: translate(0px, 200px);
+  }
+  .slider {
+    transform: translate(0px, 200px);
+  }
+  .sendForm {
+    transform: translate(0px, 200px);
   }
 }

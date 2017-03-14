@@ -2,13 +2,6 @@
 
   .onlyMb {display: none}
 
-  .header .logo {
-    margin-left: 0px;
-    width: 140px;
-    height: 25px;
-    background-size: 140px 25px;
-  }
-
   .menu-trigger {
     position: absolute;
     left: 18px;
@@ -61,12 +54,6 @@
     }
   }
 
-  .nav {
-    position: fixed;
-    left: 0;
-    top: 0;
-  }
-
   .header {
     font-size: 14px;
     height: 55px;
@@ -80,49 +67,61 @@
     z-index: 100;
     width: 100%;
     transition: 0.6s cubic-bezier(0.4, 0.38, 0, 1.19);
+    .gnb {display: none}
+    .logo {
+      margin-left: 0px;
+      width: 140px;
+      height: 25px;
+      background-size: 140px 25px;
+    }
+    .nav {
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
   }
 
-  .header .gnb {display: none}
+  .home {
+    .uiHand {
+      background-image: url(../source/images/hand.png);
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      width: 100%;
+      height: 100%;
+      transform: translate(0px, 300px);
+      transition: 0.6s cubic-bezier(0.4, 0.38, 0, 1.19);
+    }
 
-  .uiHand {
-    background-image: url(../source/images/hand.png);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    width: 100%;
-    height: 100%;
-    transform: translate(0px, 300px);
-    transition: 0.6s cubic-bezier(0.4, 0.38, 0, 1.19);
-  }
+    .mouse {
+      text-align: center;
+      width: 30px;
+      background-size: 22px auto;
+      height: 90px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -22px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #00142b;
+      padding-top: 65px;
+      transition: .6s cubic-bezier(.4,.38,0,1.19);
+    }
 
-  .mouse {
-    text-align: center;
-    width: 30px;
-    background-size: 22px auto;
-    height: 90px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin-left: -22px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #00142b;
-    padding-top: 65px;
-    transition: .6s cubic-bezier(.4,.38,0,1.19);
-  }
-
-  .homeDesc {
-    position: absolute;
-    top: 180px;
-    left: 160px;
-    width: 100%;
-    opacity: 0;
-    transform: translate(0px, 0px);
-    transition: 0.6s cubic-bezier(0.4, 0.38, 0, 1.19);
-    color: #00142b;
-    font-size: 23px;
-    font-weight: bold;
-    line-height: 160%;
+    .homeDesc {
+      position: absolute;
+      top: 180px;
+      left: 160px;
+      width: 100%;
+      opacity: 0;
+      transform: translate(0px, 0px);
+      transition: 0.6s cubic-bezier(0.4, 0.38, 0, 1.19);
+      color: #00142b;
+      font-size: 23px;
+      font-weight: bold;
+      line-height: 160%;
+    }
   }
 
   .fine-uploader-gallery {
@@ -151,12 +150,16 @@
   .demo .upload .upload-view {
     flex: 100%;
     width: 100%;
+    height: 180px;
   }
 
   .blog {
     .title {
       font-size: 24px;
       transition: .9s cubic-bezier(.4,.38,0,1.19);
+    }
+    .slider {
+     width: 90%;
     }
     .sliderItem {
       height: inherit;
@@ -167,8 +170,10 @@
         color: #000;
         font-weight: bold;
         line-height: 160%;
+        height: 28px;
+        overflow: hidden;
       }
-      .desc {
+      .descpan {
         border-top: 1px #e9e9e9 solid;
         margin: 20px 20px;
         padding-top: 17px;
@@ -231,7 +236,49 @@
       transform: translate(0px, 90px);
     }
     .uiHand {
-      transform: translate(-90px, -130px) scale(1.6);
+      transform: translate(-100px, -200px) scale(1.6);
+    }
+  }
+
+  .about, .demo, .service, .blog, .contact {
+    .title {
+      margin-top: 90px;
+      transform: translate(0px, 200px);
+      span {
+        font-size: 24px;
+      }
+    }
+    .desc {
+      font-size: 13px;
+      margin-top: 15px;
+      transform: translate(0px, 200px);
+      span {
+        font-size: 13px;
+      }
+    }
+    .upload {
+      margin: 20px auto 0 auto;
+      transform: translate(0px, 200px);
+    }
+    .slider {
+      margin: 40px auto 0 auto;
+      transform: translate(0px, 200px);
+      .sliderItem {
+        background-image: none;
+      }
+    }
+    .sendForm {
+      margin: 40px auto 0 auto;
+      transform: translate(0px, 200px);
+      input, textarea {
+        padding: 6px 12px;
+        font-size: 13px;
+      }
+      .textType .nameError {
+        right: 9px;
+        top: 13px;
+        font-size: 13px;
+      }
     }
   }
 

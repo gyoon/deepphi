@@ -6,7 +6,6 @@
     font-size: 58px;
     span {font-weight: bold}
     transition: .9s cubic-bezier(.4,.38,0,1.19);
-    transform: translate(0px, 200px);
     opacity: 0;
   }
 }
@@ -14,7 +13,6 @@
 .fp-viewing-service {
   .service {
     .title {
-      transform: translate(0px, -90px);
       opacity: 1;
     }
   }

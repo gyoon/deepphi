@@ -14,19 +14,17 @@
     color: #262626;
     font-size: 22px;
     transition: 1.2s cubic-bezier(.4,.38,0,1.19);
-    transform: translate(0px, 300px);
     opacity: 0;
     line-height: 160%;
-    span {color: #006cb8}
+    span {color: #006cb8; font-size: 22px;}
   }
 
   .upload {
     transition: 1.4s cubic-bezier(.4,.38,0,1.19);
-    transform: translate(0px, 200px);
     opacity: 0;
     width: 80%;
     max-width: 1250px;
-    margin: 0px auto;
+    margin: 100px auto 0px auto;
     display: flex;
     .fine-uploader-gallery {
       width: 100%;
@@ -72,15 +70,12 @@
 .fp-viewing-demo {
   .demo {
     .title {
-      transform: translate(0px, -90px);
       opacity: 1;
     }
     .desc {
-      transform: translate(0px, -40px);
       opacity: 1;
     }
     .upload {
-      transform: translate(0px, 10px);
       opacity: 1;
     }
   }

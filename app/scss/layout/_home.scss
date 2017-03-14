@@ -9,12 +9,14 @@
 
 .uiHand {
   background-image: url("../source/images/hand.png");
-  background-size: 80% auto;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: bottom right;
   width: 100%;
   height: 100%;
-  transform: translate(0px, 300px);
+  position: absolute;
+  bottom: -23%;
+  //transform: translate(0px, 300px);
   transition: .6s cubic-bezier(.4,.38,0,1.19);
 }
 
@@ -51,11 +53,11 @@
 .fp-viewing-home {
   .homeDesc {
     position: absolute;
-    top:300px;
-    left:160px;
+    //top:300px;
+    //left:160px;
     opacity: 1;
   }
   .uiHand {
-    transform: translate(0px, 200px);
+    //transform: translate(0px, 200px);
   }
 }

@@ -4,7 +4,8 @@ $(document).ready(function() {
     $('#fullpage').fullpage({
         anchors: ['home', 'about', 'demo', 'service', 'blog', 'contact'],
         menu: '#menu',
-        css3: true
+        css3: true,
+        normalScrollElements: '.remodal'
     });
 
 
@@ -98,6 +99,12 @@ $(document).ready(function() {
             $(this).toggleClass('active-' + (index+1));
         })
     });
+
+
+    //modal
+    var modalHeight = $(window).height();
+
+    $(".scrollDiv").css('height', modalHeight - 100);
 
 
 });

@@ -194,14 +194,14 @@
   content: '•';
   text-align: center;
 
-  opacity: .25;
-  color: black;
+  opacity: 1;
+  color: #fff;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .slick-dots li.slick-active button:before
 {
-  opacity: .75;
-  color: black;
+  opacity: 1;
+  color: #006cb8;
 }
