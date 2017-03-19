@@ -19,11 +19,12 @@ var gulp = require ('gulp'),
  **********************************************************************************/
 
 var target = {
-    htmlSrc : 'app/index.html',
+    htmlSrc : 'app/**/*.html',
     sassSrc : 'app/scss/**/*.scss',
     resourceSrc : 'app/source/**/*',
     jsSrc : 'app/js/**/*',
     htmlDest : 'dist/',
+    pageDest : 'dist/page/',
     cssDest : 'dist/css',
     jsDest : 'dist/js',
     resourceDest : 'dist/source',
@@ -51,7 +52,6 @@ gulp.task("html", function() {
         .src(target.htmlSrc)
         .pipe(gulp.dest(target.htmlDest))
         .pipe(reload({stream:true}));
-
 });
 
 /**********************************************************************************
