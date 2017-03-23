@@ -1,1 +1,79 @@
-.login {font-size: 30px}
+
+.login {
+  height: 100%;
+  color:#fff;
+  background-image: url(../source/admin/login_bg.png);
+  background-size: 100% auto;
+  background-color: #006cb8;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.loginBox{
+  position:absolute;
+  top: calc(50% - 316px);
+  left: calc(50% - 300px);
+  width: 600px;
+  height: 632px;
+  background-color: rgba(0, 84, 142, 0.5);
+
+}
+.loginBox h1 {
+  padding-top:80px;
+}
+.h_logo{
+  background: url(../source/admin/logo.png) no-repeat;
+  background-size: 326px auto;
+  font-size: 0;
+  display: block;
+  width: 326px;
+  height: 65px;
+  margin: 0 auto;
+}
+.loginBox form{
+  position:relative;
+  margin-top:50px;
+  padding:0 55px;
+  overflow: visible;
+}
+.loginInput{
+  width: 490px;
+  height: 60px;
+  padding-left:20px;
+  margin-top:20px;
+  font-size:22px;
+  color:#000;
+  border:0;
+}
+.rememberLogin {
+  margin-top: 16px;
+  width:170px;
+}
+.rememberLogin label{
+  font-size:19px;
+  color:#fff;
+}
+.rememberLogin input{
+  border:1px solid #fff;
+  background:#0060a3;
+  width:24px;
+  height: 24px;
+  margin:-10px 10px -5px 0;
+  -webkit-appearance: none;
+}
+.loginError{
+  position:absolute;
+  top:180px;
+  right: 55px;
+  color:#ffd200;
+  font-size:15px;
+}
+.loginBox .submit{
+  clear:both;
+  margin-top:50px;
+}
+.loginBox .submit .button{
+  width: 490px;
+  height:60px;
+  background-color:#00375d;
+  font-size:22px;
+}
