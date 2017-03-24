@@ -40,16 +40,13 @@
     height: 75px;
     background-color: white;
     border-bottom: 1px #dfe0e1 solid;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
     position: fixed;
     z-index: 100;
     width: 100%;
     transition: 0.6s cubic-bezier(0.4, 0.38, 0, 1.19);
     .logo {
-      margin-left: 0px;
+      margin: 20px auto;
+      float: none;
       width: 200px;
       height: 35px;
       background-size: 200px 35px;
@@ -69,7 +66,13 @@
         height:3px;
         top: 20px; }
     }
-    .gnb {display: none}
+    .gnb {
+      display: none;
+      line-height: normal;
+      li {
+        display: block;
+      }
+    }
     .nav {
       position: fixed;
       left: 0;
@@ -136,12 +139,12 @@
       width: 90%;
       .textType  {
         padding: 0;
-        width: inherit;
+        width: 100%;
         input {margin: 5px 0}
       }
       .areaType {
         padding: 0;
-        width: inherit;
+        width: 100%;
         textarea {margin: 5px 0}
       }
     }

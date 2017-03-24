@@ -59,10 +59,6 @@
     height: 55px;
     background-color: white;
     border-bottom: 1px #dfe0e1 solid;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
     position: fixed;
     z-index: 100;
     width: 100%;
@@ -82,11 +78,18 @@
         height:3px;
         top: 16px; }
     }
-    .gnb {display: none}
+    .gnb {
+      display: none;
+      line-height: normal;
+      li {
+        display: block;
+      }
+    }
     .logo {
-      margin-left: 0px;
       width: 140px;
       height: 25px;
+      margin: 15px auto;
+      float: none;
       background-size: 140px 25px;
     }
     .nav {

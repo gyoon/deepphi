@@ -1,0 +1,46 @@
+.disease-set-wrap{
+   width: 926px;
+ }
+
+.disease-set {
+  margin-bottom: 10px;
+  .pick-a-color-markup {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .disease-cell {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 0 0 10px;
+    input {width: 620px}
+  }
+}
+
+.pick-a-color-markup .input-group-btn .color-dropdown {
+  height: 42px;
+}
+
+.pick-a-color-markup .input-group-btn .color-dropdown {
+  padding: 0;
+  border: 0;
+}
+
+.pick-a-color-markup .color-preview {
+  width: 51px;
+  height: 42px;
+  margin: 0;
+}
+
+.color-dropdown {
+  border-radius: 0!important;
+  .caret {
+    position: absolute;
+    top: 19px;
+    right: 7px;
+    padding: 0;
+  }
+}
+.pick-a-color-markup .color-preview.current-color {margin-bottom: 0}
+.pick-a-color-markup .color-preview {border-radius: 0}
+
+.color-menu-tabs {display: none}

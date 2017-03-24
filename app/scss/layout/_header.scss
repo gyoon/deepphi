@@ -19,16 +19,13 @@
   height: 90px;
   background-color: rgba(255, 255, 255, 1);
   border-bottom: 1px #dfe0e1 solid;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
   position: fixed;
   z-index: 100;
   width: 100%;
   transition: .6s cubic-bezier(.4,.38,0,1.19);
   .logo {
     display: block;
+    float:left;
     background-image: url("../source/images/logo.png");
     width: 234px;
     height: 46px;
@@ -36,12 +33,14 @@
     transition: .6s cubic-bezier(.4,.38,0,1.19);
     background-repeat: no-repeat;
     margin-left: 55px;
+    margin-top: 20px;
   }
   .gnb {
-    display: flex;
-    align-content: center;
-    align-items: center;
+    line-height: 90px;
+    vertical-align: middle;
+    float:right;
     li {
+      display: inline-block;
       &:last-child {a {margin-right: 55px;}}
       a {
         color: #202020;

@@ -12,6 +12,9 @@ a{
   display:block;
   text-decoration: none;
 }
+ul,li{
+  list-style: none;
+}
 body{
   position: relative;
   height: 100%;
@@ -22,6 +25,8 @@ input, select{
   box-sizing: border-box;
   border:1px solid #d1d1d1;
   height: 42px;
+  font-size:15px;
+  padding:0 10px;
 }
 input[type=checkbox], input[type=radio]{
   cursor: pointer;
@@ -31,12 +36,41 @@ input[type=checkbox], input[type=radio]{
 label {
   vertical-align: middle;
 }
-.button{
-  color:#fff;
+button{
+  height: 42px;
   box-sizing: border-box;
   border:0;
 }
+/*button color*/
+.btn-blu{ background-color:#006cb8; transition: background-color .7s, color .7s}
+.btn-blu:hover{ background-color: #005c9c;}
+.btn-gry{ background-color:#444; transition: background-color .7s, color .7s}
+.btn-gry:hover{ background-color: #000}
 
+/*button size*/
+/*button style*/
+button span{
+  font-size:16px;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding-left:28px
+}
+.save-btn{
+  float:right;
+  width:102px;
+  background-image: url(../source/admin/ico_save.png);
+  background-repeat: no-repeat;
+  background-position: left 20px center;
+}
+.search-btn{
+  width:48px;
+  background-image: url(../source/admin/ico_search.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  vertical-align: middle;
+}
 .header{
   width:100%;
   height:74px;
@@ -69,6 +103,12 @@ nav {
 .util-menu{
   float: right;
   margin-right: 10px;
+}
+.loginInfo{
+  float: left;
+  height: 20px;
+  font-size: 19px;
+  color:#fff;
 }
 .util-menu .more-button{
   float: left;
@@ -142,51 +182,179 @@ nav {
 .gnb li.qna.on a{
   background: url(../source/admin/ico_gnb.png) no-repeat -50px -184px;
 }
+.bodycontiner {
+  position: relative;
+  min-height:  calc(100% - 74px);
+  &:before {
+    content: '';
+    display: block;
+    background-color:#dcdcdc;
+    width: 206px;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0
+  }
+}
 .contents{
   margin-left: 266px;
-  width: calc(100% - 326px);
+  width: calc(100% - 320px);
+  background-color: #fff;
 }
 .contents h2{
   padding:30px 0;
   font-size:36px;
   font-weight: bold;
 }
+.filter{
+  height: 42px;
+}
+.filter .search {
+  float: left;
+  position: relative;
+  display: table;
+}
+.select-wrap,.input-wrap {
+  padding-right: 6px;
+  display: table-cell;
+}
+.select-wrap select{
+  width:100%;
+  vertical-align: middle;
+}
+.select-wrap select.qty{
+  width:60px;
+}
+.select-wrap select.user{
+  width:200px;
+}
+.input-wrap {
+  width: 230px;
+}
+.input-wrap input {
+  width: 100%;
+  vertical-align: middle;
+}
 
-.filter {
-  .search{
-    float: left;
-    position: relative;
-    display: table;
-    button{
-      width:48px;
-      height: 42px;
-      background-color: #006cb8;
-    }
-    .selectWrap,.inputWrap{
-      padding-right: 6px;
-      display: table-cell;
-      select{
-        width:100%;
-      }
-      &.qty{
-        width:60px;
-      }
-      &.user{
-        width:140px;
-      }
-    }
-    .inputWrap {
-      padding-right: 6px;
-      display: table-cell;
-      width:200px;
-      input {
-        width: 100%;
-      }
-    }
-  }
-  .savebutton {
-    float: right;
-  }
+
+
+/*추가*/
+legend, caption {
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+input[type=checkbox], input[type=radio]{
+  cursor: pointer;
+  transition: .05s border-color ease-in-out;
+  margin:0;
+}
+select:hover, input:hover{
+  border:1px solid #444;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.board-wrap{
+  margin-top:20px
+}
+.board-type1{width: 100%; border-top:2px solid #000}
+
+.board-type1 th{
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color:#000;
+  border-left: 1px solid #d1d1d1;
+  border-bottom: 1px solid #000;
+}
+.board-type1 th:first-child, .board-type1 td:first-child{
+  border-left:0
+}
+.board-type1 tr{
+  border-bottom: 1px solid #d1d1d1
+}
+.board-type1 tr td{
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  border-left: 1px solid #d1d1d1;
+  box-sizing:border-box
+}
+.board-type1 th, .board-type1 td{
+  padding: 14px 10px;
+}
+.table-paging-wrap{
+  position:relative;
+  text-align: center;
+  margin-top: 30px
+}
+/*button paging*/
+.paging-wrap a{
+  display:inline-block;
+  vertical-align: middle;
+}
+.paging-wrap a img{
+  margin-top:4px;
+  padding:0 6px
+}
+.paging-wrap >.paging{
+  display: inline-block
+}
+.paging-wrap >.paging a:hover,
+.paging-wrap >.paging >.current{
+  color:#006cb8;
+  border:1px solid #006cb8;
+  font-weight: bold
+}
+.paging-wrap > .paging a{
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin: 0 -3px;
+  line-height: 32px;
+  color: #444;
+  font-size: 16px;
+  text-align: center;
+}
+.prev-btn, .next-btn {
+  width: 34px;
+  height: 34px;
+  border:1px solid #d1d1d1;
+  margin:0 10px;
+}
+.prev-btn .spr, .next-btn .spr {
+  width: 10px;
+  height: 18px;
+  display: block;
+  margin: 7px 12px;
+}
+.prev-btn .spr{
+  background: url(../source/admin/btn_page.png) no-repeat 0 0;
+}
+.prev-btn:hover .spr{
+  background: url(../source/admin/btn_page.png) no-repeat -1px -27px;
+}
+.next-btn .spr{
+  background: url(../source/admin/btn_page.png) no-repeat -20px 0;
+}
+.next-btn:hover .spr {
+  background: url(../source/admin/btn_page.png) no-repeat -19px -27px;
+}
+.prev-btn:hover, .prev-btn:active, .next-btn:hover, .next-btn:active{
+  border:1px solid #444;
+}
+.show{
+  position: absolute;
+  top: 0px;
+  left: 0;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 

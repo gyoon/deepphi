@@ -19,6 +19,7 @@ var gulp = require ('gulp'),
  **********************************************************************************/
 
 var target = {
+    indexSrc : 'app/index.html',
     htmlSrc : 'app/front/*.html',
     adminSrc : 'app/admin/*.html',
     sassSrc : 'app/scss/**/*.scss',
@@ -49,6 +50,11 @@ gulp.task ('sass', function (){
  **********************************************************************************/
 
 gulp.task("html", function() {
+    gulp
+        .src(target.indexSrc)
+        .pipe(gulp.dest(target.dest))
+        .pipe(reload({stream:true}));
+
     gulp
         .src(target.htmlSrc)
         .pipe(gulp.dest(target.htmlDest))
@@ -106,31 +112,31 @@ gulp.task("clean", function() {
 
 gulp.task('inject', function () {
 
-    gulp.src(target.htmlSrc)
-        .pipe(inject(gulp.src(mainBowerFiles({ debugging: true }), { base: 'bower_components' }), {
-            name: 'bower',
-            relative: false
+    //gulp.src(target.htmlSrc)
+      //  .pipe(inject(gulp.src(mainBowerFiles({ debugging: true }), { base: 'bower_components' }), {
+        //    name: 'bower',
+          //  relative: false
             //ignorePath: '/../dist'
-        }))
-        .pipe(inject(es.merge(
+        //}))
+        //.pipe(inject(es.merge(
             //gulp.src(['dist/**/*.css', '!bower_components/**', '!dist/lib/**', '!dist/css/admin.css'], {read: false}),
-            gulp.src(['dist/**/*.js', '!bower_components/**', '!dist/lib/**'], {read: false})
-                .pipe(naturalSort())
-        ), {/*ignorePath: '../../dist/', */relative: false}))
-        .pipe(gulp.dest(target.htmlDest));
+          //  gulp.src(['dist/js/index.js', '!bower_components/**', '!dist/lib/**'], {read: false})
+            //    .pipe(naturalSort())
+        //), {/*ignorePath: '../../dist/', */relative: false}))
+        //.pipe(gulp.dest(target.htmlDest));
 
-    gulp.src(target.adminSrc)
-        .pipe(inject(gulp.src(mainBowerFiles({ debugging: true }), { base: 'bower_components' }), {
-            name: 'bower',
-            relative: false
+    //gulp.src(target.adminSrc)
+        //.pipe(inject(gulp.src(mainBowerFiles({ debugging: true }), { base: 'bower_components' }), {
+            //name: 'bower',
+            //relative: false
             //ignorePath: '/../dist'
-        }))
-        .pipe(inject(es.merge(
+        //}))
+        //.pipe(inject(es.merge(
             //gulp.src(['dist/**/*.css', '!bower_components/**', '!dist/lib/**', '!dist/css/app.css'], {read: false}),
-            gulp.src(['dist/**/*.js', '!bower_components/**', '!dist/lib/**'], {read: false})
-                .pipe(naturalSort())
-        ), {/*ignorePath: '../../dist/', */relative: false}))
-        .pipe(gulp.dest(target.adminDest));
+          //  gulp.src(['dist/js/admin.js', '!bower_components/**', '!dist/lib/**'], {read: false})
+            //    .pipe(naturalSort())
+        //), {/*ignorePath: '../../dist/', */relative: false}))
+        //.pipe(gulp.dest(target.adminDest));
 
 });
 
@@ -162,6 +168,8 @@ gulp.task("watch", function(){
         gulp.watch(target.sassSrc, ['sass', 'inject']);
         gulp.watch(target.resourceSrc, ['resource', 'inject']);
         gulp.watch(target.jsSrc, ['javascript', 'inject']);
+        gulp.watch(target.indexSrc, ['html', 'inject']);
+        gulp.watch(target.adminSrc, ['html', 'inject']);
         gulp.watch(target.htmlSrc, ['html', 'inject']);
         gulp.slurped = true; // step 3
     }

@@ -23,6 +23,8 @@
     "fullpage.js": "~2.9.3",
     "slick-carousel": "^1.6.0",
     "remodal": "^1.1.1",
-    "fine-uploader": "^5.13.0"
+    "fine-uploader": "^5.13.0",
+    "pick-a-color": "^1.2.3",
+    "jquery.easy-pie-chart": "^2.1.6"
   }
 }
