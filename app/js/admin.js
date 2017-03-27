@@ -47,6 +47,25 @@ $(document).ready(function() {
         lineCap: 'butt'
     });
 
+
+    //qna
+
+    $('.qna-list li').click(function() {
+        $('.qna-list li').removeClass('on')
+        $(this).addClass('on');
+    });
+
+    $('.qna-list li .qna-active').click(function(event) {
+        event.stopPropagation();
+        var activeYn = $(this).parents('li').hasClass('on')
+        if (activeYn) {
+            $(this).parents('li').removeClass('on');
+        } else {
+            $(this).parents('li').addClass('on');
+        }
+    });
+
+
 });
 
 
