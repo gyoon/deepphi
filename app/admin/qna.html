@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width">
     <!-- bower:css -->
     <!-- endinject -->
+    <link rel="stylesheet" href="/dist/lib/remodal/dist/remodal.css">
+    <link rel="stylesheet" href="/dist/lib/remodal/dist/remodal-default-theme.css">
     <link rel="stylesheet" href="/dist/css/admin.css">
     <!-- inject:css -->
     <!-- endinject -->
@@ -18,12 +20,21 @@
     <h1><a href="www.naver.com" class="h_logo">deep:phi</a></h1>
     <div class="util-menu">
         <div class="loginInfo">abc@gmail.com</div>
-        <a class="more-button" href="#" role="button"></a>
+        <a class="more-button" href="javascript:;"></a>
+        <div class="more-wrap-container">
+            <div class="bg"></div>
+            <div class="more-wrap">
+                <ul>
+                    <li><a href="javascript:;" data-remodal-target="pass">비밀번호 변경</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 <div class="bodyContainer">
     <nav>
-        <ul class="gnb">
+        <ul class="nav-list-wrap">
             <li class="image"><a href="image.html">Image</a></li>
             <li class="setting"><a href="setting.html">Setting</a></li>
             <li class="data"><a href="data.html">Data</a></li>
@@ -78,10 +89,35 @@
                         <span>010-1234-5678</span>
                     </div>
                     <div class="qna-btn-wrap">
-                        <button type="button" class="btn-sml btn-blu" onclick="location.href='qnaReply.html'">Reply</button>
-                        <button type="button" class="btn-sml btn-gry">Delete</button>
+                        <button type="button" class="btn-sml reply-btn btn-blu" onclick="location.href='qnaReply.html'"><span>Reply</span></button>
+                        <button type="button" class="btn-sml del-btn btn-gry"><span>Delete</span></button>
                     </div>
-                    <div class="email-contents">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
+                    <div class="email-message">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
+                        [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공</div>
+                </li>
+                <li>
+                    <div class="qna-info-wrap">
+                        <div class="qna-title-wrap">
+                            <a href="#" class="qna-title">[Contact US] MESSAGE 내용 15자 제공</a>
+                        </div>
+                        <div class="info-wrap">
+                            <div class="qna-date">2017.01.07</div>
+                            <div class="qna-answer">답변완료</div>
+                            <div class="qna-active"></div>
+                        </div>
+                    </div>
+                    <div class="sender-wrap">
+                        <span>2017.01.17</span>
+                        <span>NAME</span>
+                        <span>email@email.com</span>
+                        <span>address</span>
+                        <span>010-1234-5678</span>
+                    </div>
+                    <div class="qna-btn-wrap">
+                        <button type="button" class="btn-sml reply-btn btn-blu" onclick="location.href='qnaReply.html'"><span>Reply</span></button>
+                        <button type="button" class="btn-sml del-btn btn-gry"><span>Delete</span></button>
+                    </div>
+                    <div class="email-message">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
                         [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공</div>
                 </li>
                 <li>
@@ -103,10 +139,10 @@
                         <span>010-1234-5678</span>
                     </div>
                     <div class="qna-btn-wrap">
-                        <button type="button" class="btn-sml btn-blu">Reply </button>
-                        <button type="button" class="btn-sml btn-gry">Delete</button>
+                        <button type="button" class="btn-sml reply-btn btn-blu" onclick="location.href='qnaReply.html'"><span>Reply</span></button>
+                        <button type="button" class="btn-sml del-btn btn-gry"><span>Delete</span></button>
                     </div>
-                    <div class="email-contents">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
+                    <div class="email-message">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
                         [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공</div>
                 </li>
                 <li>
@@ -128,10 +164,10 @@
                         <span>010-1234-5678</span>
                     </div>
                     <div class="qna-btn-wrap">
-                        <button type="button" class="btn-sml btn-blu">Reply </button>
-                        <button type="button" class="btn-sml btn-gry">Delete</button>
+                        <button type="button" class="btn-sml reply-btn btn-blu" onclick="location.href='qnaReply.html'"><span>Reply</span></button>
+                        <button type="button" class="btn-sml del-btn btn-gry"><span>Delete</span></button>
                     </div>
-                    <div class="email-contents">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
+                    <div class="email-message">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
                         [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공</div>
                 </li>
                 <li>
@@ -153,10 +189,135 @@
                         <span>010-1234-5678</span>
                     </div>
                     <div class="qna-btn-wrap">
-                        <button type="button" class="btn-sml btn-blu">Reply </button>
-                        <button type="button" class="btn-sml btn-gry">Delete</button>
+                        <button type="button" class="btn-sml reply-btn btn-blu" onclick="location.href='qnaReply.html'"><span>Reply</span></button>
+                        <button type="button" class="btn-sml del-btn btn-gry"><span>Delete</span></button>
                     </div>
-                    <div class="email-contents">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
+                    <div class="email-message">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
+                        [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공</div>
+                </li>
+                <li>
+                    <div class="qna-info-wrap">
+                        <div class="qna-title-wrap">
+                            <a href="#" class="qna-title">[Contact US] MESSAGE 내용 15자 제공</a>
+                        </div>
+                        <div class="info-wrap">
+                            <div class="qna-date">2017.01.07</div>
+                            <div class="qna-unanswer">미답변</div>
+                            <div class="qna-active"></div>
+                        </div>
+                    </div>
+                    <div class="sender-wrap">
+                        <span>2017.01.17</span>
+                        <span>NAME</span>
+                        <span>email@email.com</span>
+                        <span>address</span>
+                        <span>010-1234-5678</span>
+                    </div>
+                    <div class="qna-btn-wrap">
+                        <button type="button" class="btn-sml reply-btn btn-blu" onclick="location.href='qnaReply.html'"><span>Reply</span></button>
+                        <button type="button" class="btn-sml del-btn btn-gry"><span>Delete</span></button>
+                    </div>
+                    <div class="email-message">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
+                        [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공</div>
+                </li>
+                <li>
+                    <div class="qna-info-wrap">
+                        <div class="qna-title-wrap">
+                            <a href="#" class="qna-title">[Contact US] MESSAGE 내용 15자 제공</a>
+                        </div>
+                        <div class="info-wrap">
+                            <div class="qna-date">2017.01.07</div>
+                            <div class="qna-unanswer">미답변</div>
+                            <div class="qna-active"></div>
+                        </div>
+                    </div>
+                    <div class="sender-wrap">
+                        <span>2017.01.17</span>
+                        <span>NAME</span>
+                        <span>email@email.com</span>
+                        <span>address</span>
+                        <span>010-1234-5678</span>
+                    </div>
+                    <div class="qna-btn-wrap">
+                        <button type="button" class="btn-sml reply-btn btn-blu" onclick="location.href='qnaReply.html'"><span>Reply</span></button>
+                        <button type="button" class="btn-sml del-btn btn-gry"><span>Delete</span></button>
+                    </div>
+                    <div class="email-message">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
+                        [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공</div>
+                </li>
+                <li>
+                    <div class="qna-info-wrap">
+                        <div class="qna-title-wrap">
+                            <a href="#" class="qna-title">[Contact US] MESSAGE 내용 15자 제공</a>
+                        </div>
+                        <div class="info-wrap">
+                            <div class="qna-date">2017.01.07</div>
+                            <div class="qna-unanswer">미답변</div>
+                            <div class="qna-active"></div>
+                        </div>
+                    </div>
+                    <div class="sender-wrap">
+                        <span>2017.01.17</span>
+                        <span>NAME</span>
+                        <span>email@email.com</span>
+                        <span>address</span>
+                        <span>010-1234-5678</span>
+                    </div>
+                    <div class="qna-btn-wrap">
+                        <button type="button" class="btn-sml reply-btn btn-blu" onclick="location.href='qnaReply.html'"><span>Reply</span></button>
+                        <button type="button" class="btn-sml del-btn btn-gry"><span>Delete</span></button>
+                    </div>
+                    <div class="email-message">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
+                        [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공</div>
+                </li>
+                <li>
+                    <div class="qna-info-wrap">
+                        <div class="qna-title-wrap">
+                            <a href="#" class="qna-title">[Contact US] MESSAGE 내용 15자 제공</a>
+                        </div>
+                        <div class="info-wrap">
+                            <div class="qna-date">2017.01.07</div>
+                            <div class="qna-unanswer">미답변</div>
+                            <div class="qna-active"></div>
+                        </div>
+                    </div>
+                    <div class="sender-wrap">
+                        <span>2017.01.17</span>
+                        <span>NAME</span>
+                        <span>email@email.com</span>
+                        <span>address</span>
+                        <span>010-1234-5678</span>
+                    </div>
+                    <div class="qna-btn-wrap">
+                        <button type="button" class="btn-sml reply-btn btn-blu" onclick="location.href='qnaReply.html'"><span>Reply</span></button>
+                        <button type="button" class="btn-sml del-btn btn-gry"><span>Delete</span></button>
+                    </div>
+                    <div class="email-message">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
+                        [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공</div>
+                </li>
+                <li>
+                    <div class="qna-info-wrap">
+                        <div class="qna-title-wrap">
+                            <a href="#" class="qna-title">[Contact US] MESSAGE 내용 15자 제공</a>
+                        </div>
+                        <div class="info-wrap">
+                            <div class="qna-date">2017.01.07</div>
+                            <div class="qna-unanswer">미답변</div>
+                            <div class="qna-active"></div>
+                        </div>
+                    </div>
+                    <div class="sender-wrap">
+                        <span>2017.01.17</span>
+                        <span>NAME</span>
+                        <span>email@email.com</span>
+                        <span>address</span>
+                        <span>010-1234-5678</span>
+                    </div>
+                    <div class="qna-btn-wrap">
+                        <button type="button" class="btn-sml reply-btn btn-blu" onclick="location.href='qnaReply.html'"><span>Reply</span></button>
+                        <button type="button" class="btn-sml del-btn btn-gry"><span>Delete</span></button>
+                    </div>
+                    <div class="email-message">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
                         [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공</div>
                 </li>
             </ul>
@@ -179,10 +340,31 @@
 </div>
 <script src="/dist/lib/jquery/jquery.min.js"></script>
 
+<script src="/dist/lib/remodal/dist/remodal.js"></script>
 <script src="/dist/lib/tinycolor/tinycolor.js"></script>
 <script src="/dist/lib/pick-a-color/build/1.2.2/js/pick-a-color-1.2.2.min.js"></script>
 <script src="/dist/lib/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
 
 <script src="/dist/js/admin.js"></script>
+
+<div class="remodal small" data-remodal-id="pass">
+    <div class="remodal-header">
+        <div class="title">Change password ?</div>
+        <button data-remodal-action="close" class="remodal-close"></button>
+    </div>
+    <div class="remodal-content">
+
+        <div class="pass-form">
+            <input type="password" placeholder="Current password">
+            <input type="password" placeholder="New password">
+            <input type="password" placeholder="Confirm password">
+        </div>
+
+    </div>
+    <div class="remodal-footer">
+        <button type="button" class="btn-normal pop-btn btn-blu"><span>Ok</span></button>
+        <button type="button" class="btn-normal pop-btn btn-gry"><span>Cancel</span></button>
+    </div>
+</div>
 </body>
 </html>

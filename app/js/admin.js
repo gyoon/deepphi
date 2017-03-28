@@ -22,32 +22,6 @@ $(document).ready(function() {
     });
 
 
-    // chart
-    $('.chart01').easyPieChart({
-        lineWidth: 18,
-        size: 290,
-        trackColor: '#d1d1d1',
-        barColor: '#ff0000',
-        lineCap: 'butt'
-    });
-
-    $('.chart02').easyPieChart({
-        lineWidth: 18,
-        size: 290,
-        trackColor: '#d1d1d1',
-        barColor: '#0060f0',
-        lineCap: 'butt'
-    });
-
-    $('.chart03').easyPieChart({
-        lineWidth: 18,
-        size: 290,
-        trackColor: '#d1d1d1',
-        barColor: '#ffd200',
-        lineCap: 'butt'
-    });
-
-
     //qna
 
     $('.qna-list li').click(function() {
@@ -64,6 +38,43 @@ $(document).ready(function() {
             $(this).parents('li').addClass('on');
         }
     });
+
+
+    //menu
+    $('.more-button').click(function() {
+        $(this).next().find('.bg').addClass('active')
+        $(this).next().find('.more-wrap').addClass('active')
+    });
+
+    $('.more-wrap-container .bg').click(function() {
+        $(this).removeClass('active')
+        $(this).next('.more-wrap').removeClass('active')
+    });
+
+
+    //setting
+    $('.disease-cell .edit-btn').click(function() {
+        $(this).parent('.disease-cell').prev().find('.disease-form').attr('readonly', false).focus();
+        $(this).css('display', 'none');
+        $(this).next('.save-btn').css('display', 'block');
+    });
+
+    $('.setting-save').click(function() {
+        $('.disease-cell').find('.disease-form').attr('readonly', true);
+        $('.disease-cell .save-btn').css('display', 'none');
+        $('.disease-cell .edit-btn').css('display', 'block');
+    });
+
+
+    //datepicker
+    if($('[data-toggle="datepicker"]').length) {
+        $('[data-toggle="datepicker"]').datepicker();
+    }
+
+
+
+    //image
+
 
 
 });

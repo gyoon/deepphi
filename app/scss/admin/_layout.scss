@@ -3,7 +3,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0;
   border: 0;
   font: inherit;
-  font-size: 13px;
+  font-size:15px;
   color:#444;
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
@@ -20,13 +20,33 @@ body{
   height: 100%;
   background: #fff;
 }
-input, select{
+legend, caption {
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+input, select, textarea{
   background: #fff;
   box-sizing: border-box;
   border:1px solid #d1d1d1;
-  height: 42px;
+  outline: 0;
   font-size:15px;
+  &:focus {border: 1px solid #444;}
+}
+input, select{
+  height: 42px;
   padding:0 10px;
+}
+select:hover, input:hover{
+  border:1px solid #444;
+}
+textarea{
+  width: 100%;
+  resize: none;
+  padding: 10px 10px;
 }
 input[type=checkbox], input[type=radio]{
   cursor: pointer;
@@ -37,40 +57,58 @@ label {
   vertical-align: middle;
 }
 button{
-  height: 42px;
   box-sizing: border-box;
   border:0;
 }
 /*button color*/
-.btn-blu{ background-color:#006cb8; color: #fff; transition: background-color .7s, color .7s}
-.btn-blu:hover{ background-color: #005c9c;}
-.btn-gry{ background-color:#444; color: #fff; transition: background-color .7s, color .7s}
-.btn-gry:hover{ background-color: #000}
+.btn-blu{background-color:#006cb8; transition: background-color .7s, color .7s}
+.btn-blu:hover{background-color: #005c9c;}
+.btn-gry{background-color:#444; transition: background-color .7s, color .7s}
+.btn-gry:hover{background-color: #000}
 
 /*button size*/
+.btn-normal{width:102px; height: 42px;}
 .btn-sml {width: 100px;height: 32px;}
+
 /*button style*/
 button span{
-  font-size:16px;
   color: #fff;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  padding-left:28px
+}
+.btn-normal span{
+  font-size:16px;
+  padding-left:26px
 }
 .save-btn{
   float:right;
-  width:102px;
-  background-image: url(../source/admin/ico_save.png);
+  background-image: url("../source/admin/ico_save.png");
   background-repeat: no-repeat;
-  background-position: left 20px center;
+  background-position: left 22px center;
 }
 .search-btn{
   width:48px;
-  background-image: url(../source/admin/ico_search.png);
+  height: 42px;
+  background-image: url("../source/admin/ico_search.png");
   background-repeat: no-repeat;
   background-position: center center;
   vertical-align: middle;
+}
+.edit-btn{
+  background-image: url("../source/admin/ico_edit.png");
+  background-repeat: no-repeat;
+  background-position: left 24px center;
+}
+.del-btn{
+  background-image: url("../source/admin/ico_delete.png");
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+}
+.add-btn{
+  background-image: url("../source/admin/ico_add.png");
+  background-repeat: no-repeat;
+  background-position: left 24px center;
 }
 .header{
   width:100%;
@@ -90,7 +128,7 @@ button span{
   width: 166px;
   height: 33px;
   padding:20px  0;
-  background: url(../source/admin/logo.png) no-repeat;
+  background: url("../source/admin/logo.png") no-repeat;
   background-size: 166px auto;
   font-size:0;
 }
@@ -118,70 +156,123 @@ nav {
   height: 28px;
   margin-left:24px;
   padding:0 16px;
-  background: url(../source/admin//btn_more.png) center no-repeat;
+  background: url("../source/admin//btn_more.png") center no-repeat;
 }
-
-
-.gnb li{
+.more-wrap-container {
+  .bg {
+    display: none;
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .0);
+    &.active {
+      display: block;
+    }
+  }
+  .more-wrap{
+    position:absolute;
+    z-index: 10;
+    display: none;
+    top:74px;
+    right:30px;
+    width:145px;
+    font-size: 15px;
+    border-left: 1px solid #d1d1d1;
+    border-right: 1px solid #d1d1d1;
+    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    &.active {
+      display: block;
+    }
+  }
+  .more-wrap:before{
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    z-index: 10;
+  }
+  .more-wrap ul li{
+  }
+  .more-wrap ul li a{
+    text-align: center;
+    padding: 15px 0;
+    height: 50px;
+    display: block;
+    border-bottom:1px solid #d1d1d1
+  }
+  .more-wrap ul li a:hover{
+    background-color: #f3f3f3;
+  }
+}
+.nav-list-wrap li{
   position:relative;
   height: 90px;
   text-align: center;
   border-bottom: 1px solid #c9c9c9;
 }
-.gnb li a{
+.nav-list-wrap li a{
   font-size:20px;
   line-height: 28px;
   position:absolute;
-  top:34px;
+  top:30px;
   left:54px;
+  text-decoration: none;
 }
-.gnb li.on{
+.nav-list-wrap li.on{
   background-color: #fff;
-
+}
+.nav-list-wrap li.on a{
+  color:#006cb8;
   font-weight: bold;
 }
-.gnb li.on a{
-  color:#006cb8;
-}
-.gnb li.image a{
+.nav-list-wrap li.image a{
   width:26px;
-  background: url(../source/admin/ico_gnb.png) no-repeat 0 3px;
+  background: url("../source/admin/ico_gnb.png") no-repeat 0 3px;
   padding:0 0 0 38px;
 }
-.gnb li.image.on a{
-  background: url(../source/admin/ico_gnb.png) no-repeat -48px 3px;
+.nav-list-wrap li.image.on a{
+  background: url("../source/admin/ico_gnb.png") no-repeat -48px 3px;
 }
-.gnb li.setting a{
+.nav-list-wrap li.setting a{
   width:28px;
-  background: url(../source/admin/ico_gnb.png) no-repeat 0 -42px;
+  background: url("../source/admin/ico_gnb.png") no-repeat 0 -42px;
   padding:0 0 0 38px;
 }
-.gnb li.setting.on a{
-  background: url(../source/admin/ico_gnb.png) no-repeat -48px -42px;
+.nav-list-wrap li.setting.on a{
+  background: url("../source/admin/ico_gnb.png") no-repeat -48px -42px;
 }
-.gnb li.data a{
+.nav-list-wrap li.data a{
   width:28px;
-  background: url(../source/admin/ico_gnb.png) no-repeat 0 -90px;
+  background: url("../source/admin/ico_gnb.png") no-repeat 0 -90px;
   padding:0 0 0 38px;
 }
-.gnb li.data.on a{
-  background: url(../source/admin/ico_gnb.png) no-repeat -48px -90px;
+.nav-list-wrap li.data.on a{
+  background: url("../source/admin/ico_gnb.png") no-repeat -48px -90px;
 }
-.gnb li.user a{
+.nav-list-wrap li.user a{
   width:22px;
-  background: url(../source/admin/ico_gnb.png) no-repeat 0 -138px;
+  background: url("../source/admin/ico_gnb.png") no-repeat 0 -138px;
   padding:0 0 0 38px;
 }
-.gnb li.user.on a{
-  background: url(../source/admin/ico_gnb.png) no-repeat -51px -138px;
+.nav-list-wrap li.user.on a{
+  background: url("../source/admin/ico_gnb.png") no-repeat -48px -138px;
 }
-.gnb li.qna a{
+.nav-list-wrap li.qna a{
   width:24px;
-  background: url(../source/admin/ico_gnb.png) no-repeat 0 -184px;
+  background: url("../source/admin/ico_gnb.png") no-repeat 0 -184px;
   padding:0 0 0 38px;
 }
-.gnb li.qna.on a{
-  background: url(../source/admin/ico_gnb.png) no-repeat -50px -184px;
+.nav-list-wrap li.qna.on a{
+  background: url("../source/admin/ico_gnb.png") no-repeat -48px -184px;
 }
 .bodyContainer {
   position: relative;
@@ -237,26 +328,7 @@ nav {
   vertical-align: middle;
 }
 
-
-
-/*추가*/
-legend, caption {
-  visibility: hidden;
-  overflow: hidden;
-  width: 0;
-  height: 0;
-  font-size: 0;
-  line-height: 0;
-}
-
-input[type=checkbox], input[type=radio]{
-  cursor: pointer;
-  transition: .05s border-color ease-in-out;
-  margin:0;
-}
-select:hover, input:hover{
-  border:1px solid #444;
-}
+/*table style*/
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -268,7 +340,6 @@ table {
 
 .board-type1 th{
   text-align: center;
-  font-size: 15px;
   font-weight: bold;
   color:#000;
   border-left: 1px solid #d1d1d1;
@@ -282,7 +353,6 @@ table {
 }
 .board-type1 tr td{
   text-align: center;
-  font-size: 14px;
   letter-spacing: -0.5px;
   border-left: 1px solid #d1d1d1;
   box-sizing:border-box
@@ -336,16 +406,16 @@ table {
   margin: 7px 12px;
 }
 .prev-btn .spr{
-  background: url(../source/admin/btn_page.png) no-repeat 0 0;
+  background: url("../source/admin/btn_page.png") no-repeat 0 0;
 }
 .prev-btn:hover .spr{
-  background: url(../source/admin/btn_page.png) no-repeat -1px -27px;
+  background: url("../source/admin/btn_page.png") no-repeat -1px -27px;
 }
 .next-btn .spr{
-  background: url(../source/admin/btn_page.png) no-repeat -20px 0;
+  background: url("../source/admin/btn_page.png") no-repeat -20px 0;
 }
 .next-btn:hover .spr {
-  background: url(../source/admin/btn_page.png) no-repeat -19px -27px;
+  background: url("../source/admin/btn_page.png") no-repeat -19px -27px;
 }
 .prev-btn:hover, .prev-btn:active, .next-btn:hover, .next-btn:active{
   border:1px solid #444;
@@ -354,14 +424,14 @@ table {
   position: absolute;
   top: 0px;
   left: 0;
-  font-size: 15px;
   font-weight: bold;
 }
 
-
+/*popup style*/
 .remodal {
   width: 660px;
   padding: 0;
+  &.small {width: 500px}
   .remodal-header {
     padding: 20px 30px;
     background-color: #f9f9f9;
@@ -372,53 +442,51 @@ table {
   }
   .remodal-content {
     overflow-y:scroll;
-    padding: 0 20px;
+    padding: 0 30px;
     text-align: left;
     .title {
-      font-size: 15px;
       font-weight: bold;
       padding: 17px 0;
       border-bottom: 1px solid #d1d1d1;
     }
-
     .mail-box {
       margin-top: 20px;
+      border-top: 3px solid #006cb8;
+      border-left: 1px solid #d1d1d1;
+      border-right: 1px solid #d1d1d1;
+      border-bottom: 1px solid #d1d1d1;
       .mail-header {
         min-height: 66px;
-        border-top: 3px solid #006cb8;
-        border-left: 1px solid #d1d1d1;
-        border-right: 1px solid #d1d1d1;
-        border-bottom: 1px solid #d1d1d1;
+        padding: 20px 0;
+        border-bottom:1px solid #d1d1d1;
         &:after {content:'';display: block;clear: both}
         .ci {float:left;padding: 0 20px}
         .bi {float: right;padding: 0 20px}
       }
       .mail-content {
-        border-left: 1px solid #d1d1d1;
-        border-right: 1px solid #d1d1d1;
-        border-bottom: 1px solid #d1d1d1;
         background-color: #f6f9fd;
         color: #444444;
-        font-size: 15px;
         line-height: 30px;
         padding: 30px;
       }
       .mail-footer {
-        border-left: 1px solid #d1d1d1;
-        border-right: 1px solid #d1d1d1;
-        border-bottom: 1px solid #e2e2e2;
         background-color: #f3f3f3;
         padding: 10px 20px 20px 20px;
+        border-top: 1px solid #d1d1d1;
         .ps {
           padding-bottom: 10px;
           border-bottom: 1px solid #e2e2e2;
+          font-size:13px;
         }
         .company {
+          font-size:13px;
           padding: 10px 0;
+          >a{display: inline-block; margin-left:5px}
         }
         address {
           color: #7c7c7c;
           font-size: 12px;
+          letter-spacing: -0.1px;
         }
         .info {
           span {
@@ -427,8 +495,8 @@ table {
             &:after {
               display: inline-block;
               content: '|';
-              padding: 0 5px;
-              transform: scale(.7);
+              margin: 0px 5px 0 8px;
+              transform: scale(.6);
             }
             &:last-child {
               &:after {
@@ -439,12 +507,108 @@ table {
         }
       }
     }
+
+    .boxdep01 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      &.line {
+        border-top: 1px solid #d1d1d1;
+        padding-top: 20px;
+      }
+    }
+    .boxdep02 {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    .boxdep03 {
+      margin-top: 20px;
+      margin-left: 40px;
+    }
+
+    .pass-form {
+      margin-top: 30px;
+      input {width: 100%;margin-bottom: 10px}
+    }
+
   }
   .remodal-footer {
     padding: 30px 0;
-    button {
-      width: 120px;
-      height: 40px;
+    .pop-btn{width:122px}
+    button span{
+      padding-left:0
+    }
+  }
+}
+
+
+.datepicker {
+  width: 125px;
+  text-align: right;
+  background-image: url("../source/admin/ico_calender.png");
+  background-position:10px center;
+  background-repeat: no-repeat;
+}
+
+
+/*checkbox*/
+.checkbox-ui {
+  position: relative;
+  &.default {
+    [type=checkbox] {
+      &:checked {
+        + label {
+          background-image: url("../source/admin/check_on.png");
+        }
+      }
+      + label {
+        background-image: url("../source/admin/check_off.png");
+      }
+    }
+  }
+  [type=checkbox] {
+    opacity: .0;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 26px;
+    height: 26px;
+    &:checked {
+      + label {
+        padding-left: 30px;
+        background-image: url("../source/admin/login_check_on.png");
+        background-repeat: no-repeat;
+      }
+    }
+    + label {
+      cursor: pointer;
+      padding-left: 30px;
+      background-image: url("../source/admin/login_check_off.png");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.radio-ui {
+  position: relative;
+  [type=radio] {
+    opacity: .0;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 26px;
+    height: 26px;
+    &:checked {
+      + label {
+        padding-left: 30px;
+        background-image: url("../source/admin/radio_on.png");
+        background-repeat: no-repeat;
+      }
+    }
+    + label {
+      cursor: pointer;
+      padding-left: 30px;
+      background-image: url("../source/admin/radio_off.png");
+      background-repeat: no-repeat;
     }
   }
 }

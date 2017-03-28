@@ -11,6 +11,10 @@
   font-size: 18px;
   padding-top:20px
 }
+.image-detail-btn-wrap{
+  float:right;
+  .del-btn{margin-right: 10px;}
+}
 .Xray{
   position:relative;
   width: 100%;
@@ -71,6 +75,7 @@
       word-wrap:normal;
       overflow: hidden;
       vertical-align: middle;
+      font-size:14px;
     }
     .chart {
       display: inline-block;

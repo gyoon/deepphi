@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width">
     <!-- bower:css -->
     <!-- endinject -->
+    <link rel="stylesheet" href="/dist/lib/remodal/dist/remodal.css">
+    <link rel="stylesheet" href="/dist/lib/remodal/dist/remodal-default-theme.css">
     <link rel="stylesheet" href="/dist/css/admin.css">
     <!-- inject:css -->
     <!-- endinject -->
@@ -18,12 +20,21 @@
     <h1><a href="www.naver.com" class="h_logo">deep:phi</a></h1>
     <div class="util-menu">
         <div class="loginInfo">abc@gmail.com</div>
-        <a class="more-button" href="#" role="button"></a>
+        <a class="more-button" href="javascript:;"></a>
+        <div class="more-wrap-container">
+            <div class="bg"></div>
+            <div class="more-wrap">
+                <ul>
+                    <li><a href="#" data-remodal-target="pass">비밀번호 변경</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 <div class="bodyContainer">
 <nav>
-    <ul class="gnb">
+    <ul class="nav-list-wrap">
         <li class="image on"><a href="image.html">Image</a></li>
         <li class="setting"><a href="setting.html">Setting</a></li>
         <li class="data"><a href="data.html">Data</a></li>
@@ -37,7 +48,10 @@
         <div class="info">
             2017.01.17 10:00:00 / User
         </div>
-        <button type="button" class="save-btn btn-gry"><span>Save</span></button>
+        <div class="image-detail-btn-wrap">
+            <button type="button" class="btn-normal del-btn btn-gry" data-remodal-target="modalDel"><span>Delete</span></button>
+            <button type="button" class="btn-normal save-btn btn-gry" data-remodal-target="modal"><span>Save</span></button>
+        </div>
     </div>
     <div class="Xray">
         <img src="../source/admin/xray.jpg">
@@ -84,10 +98,147 @@
 </div>
 <script src="/dist/lib/jquery/jquery.min.js"></script>
 
+<script src="/dist/lib/remodal/dist/remodal.js"></script>
 <script src="/dist/lib/tinycolor/tinycolor.js"></script>
 <script src="/dist/lib/pick-a-color/build/1.2.2/js/pick-a-color-1.2.2.min.js"></script>
 <script src="/dist/lib/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
 
 <script src="/dist/js/admin.js"></script>
+
+<div class="remodal small" data-remodal-id="modalDel">
+    <div class="remodal-header">
+        <div class="title">파일을 삭제하시겠습니까?</div>
+        <button data-remodal-action="close" class="remodal-close"></button>
+    </div>
+    <div class="remodal-content">
+
+    </div>
+    <div class="remodal-footer">
+        <button type="button" class="btn-normal pop-btn btn-blu"><span>Ok</span></button>
+        <button type="button" class="btn-normal pop-btn btn-gry"><span>Cancel</span></button>
+    </div>
+</div>
+
+
+<div class="remodal" data-remodal-id="modal">
+    <div class="remodal-header">
+        <div class="title">파일을 저장하시겠습니까?</div>
+        <button data-remodal-action="close" class="remodal-close"></button>
+    </div>
+    <div class="remodal-content">
+
+        <div class="boxdep01">
+            <div class="radio-ui">
+                <input type="radio" id="test01">
+                <label for="test01">한 이미지에 판독 내용 모두 저장 </label>
+            </div>
+        </div>
+        <div class="boxdep02">
+            <div class="radio-ui">
+                <input type="radio" id="test02">
+                <label for="test02">모든 판독 저장</label>
+            </div>
+            <div class="radio-ui">
+                <input type="radio" id="test03">
+                <label for="test03">선택 판독만 저장</label>
+            </div>
+        </div>
+        <div class="boxdep03">
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test04">
+                <label for="test04">충치</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test05">
+                <label for="test05">풍치</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test06">
+                <label for="test06">하악신경</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test07">
+                <label for="test07">상악종</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test08">
+                <label for="test08">잇몸뼈라인</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test09">
+                <label for="test09">치아신경</label>
+            </div>
+        </div>
+
+        <div class="boxdep01 line">
+            <div class="radio-ui">
+                <input type="radio" id="test01">
+                <label for="test01">판독 항목별로 각각 저장</label>
+            </div>
+        </div>
+        <div class="boxdep02">
+            <div class="radio-ui">
+                <input type="radio" id="test02">
+                <label for="test02">모든 판독 각각 저장</label>
+            </div>
+            <div class="radio-ui">
+                <input type="radio" id="test03">
+                <label for="test03">선택 판독만 각각 저장</label>
+            </div>
+        </div>
+        <div class="boxdep03">
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test04">
+                <label for="test04">충치</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test05">
+                <label for="test05">풍치</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test06">
+                <label for="test06">하악신경</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test07">
+                <label for="test07">상악종</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test08">
+                <label for="test08">잇몸뼈라인</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test09">
+                <label for="test09">치아신경</label>
+            </div>
+        </div>
+
+    </div>
+    <div class="remodal-footer">
+        <button type="button" class="btn-normal pop-btn btn-blu"><span>Ok</span></button>
+        <button type="button" class="btn-normal pop-btn btn-gry"><span>Cancel</span></button>
+    </div>
+</div>
+
+
+<div class="remodal small" data-remodal-id="pass">
+    <div class="remodal-header">
+        <div class="title">Change password ?</div>
+        <button data-remodal-action="close" class="remodal-close"></button>
+    </div>
+    <div class="remodal-content">
+
+        <div class="pass-form">
+            <input type="password" placeholder="Current password">
+            <input type="password" placeholder="New password">
+            <input type="password" placeholder="Confirm password">
+        </div>
+
+    </div>
+    <div class="remodal-footer">
+        <button type="button" class="btn-normal pop-btn btn-blu"><span>Ok</span></button>
+        <button type="button" class="btn-normal pop-btn btn-gry"><span>Cancel</span></button>
+    </div>
+</div>
 </body>
 </html>

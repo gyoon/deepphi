@@ -1,3 +1,17 @@
+.qna-reply-btn-wrap{
+    >button{width:124px}
+  .preview-btn{
+    margin-right: 6px;
+    background-image: url(../source/admin/ico_preview.png);
+    background-repeat: no-repeat;
+    background-position: left 20px center;
+  }
+  .cancel-btn{
+  background-image: url(../source/admin/ico_cancel.png);
+  background-repeat: no-repeat;
+  background-position: left 26px center;
+}
+}
 .qna-list-wrap {
   margin-top: 20px;
   .qna-list li{
@@ -6,7 +20,7 @@
     width: 100%;
     transition: all 0.3s ease;
     &.on {
-      .sender-wrap, .qna-btn-wrap, .email-contents {display: block}
+      .sender-wrap, .qna-btn-wrap, .email-message {display: block}
       .qna-title {
         color:#006cb8;
         font-weight: bold;
@@ -46,14 +60,13 @@
         clear: both;
       }
     }
-
-
     .sender-wrap{
       display: none;
       float:left;
-      padding: 18px 30px;
+      margin: 30px 30px 18px 30px;
       span{
         display: block;
+        font-size:14px;
       }
     }
     .qna-btn-wrap{
@@ -62,15 +75,36 @@
       display: none;
       margin: 30px 30px 0 0;
       > button {margin-bottom: 6px}
+      .reply-btn {
+        background-image: url(../source/admin/ico_reply.png);
+        background-repeat: no-repeat;
+        background-position: left 20px center;
+        > span {
+          padding-left: 22px;
+          margin-top:-1px;
+          font-size: 14px;
+          display: block;
+        }
+      }
+      .del-btn{
+        background-size: 13px 16px;
+        background-position: left 20px center;
+        > span{
+          margin-top:-1px;
+          display: block;
+          padding-left:23px;
+          font-size: 14px;
+        }
+      }
     }
-    .email-contents {
+    .email-message {
       clear: both;
       display: none;
-      padding: 0px 30px 18px 30px;
+      margin: 0px 30px 30px 30px;
+      font-size:14px;
+      line-height: 22px;
     }
-
   }
-
   .qna-reply-title, .qna-reply-message {
     background: #fff;
     border-bottom: 1px solid  #d1d1d1;
@@ -78,44 +112,21 @@
     padding: 18px 30px;
     .title {float: left;font-size: 15px;font-weight: bold;width: 95px;}
     .content {
-      font-size: 15px;
       margin-left: 95px;
       .reply {
-        font-size: 15px;
         line-height: 30px;
-        textarea {
-          width: 100%;
-          resize: none;
-          background: #fff;
-          box-sizing: border-box;
-          border: 1px solid #d1d1d1;
-          font-size: 15px;
-          padding: 10px 10px;
-          outline: 0;
-          &:focus {border: 1px solid #444;}
         }
       }
-      .origin {
+      .sender{
         margin-top: 20px;
-        span {display: block}
-        > div {display: block;margin-top: 25px;}
+        span {display: block; font-size:14px;}
+        >.email-message{display: block;margin-top: 25px; font-size:14px; line-height: 22px;}
       }
     }
-  }
-  .qna-reply-message {border-top: 0;}
+  .qna-reply-message {padding:30px; border-top: 0;}
 }
-
-.qna-btn-header {
-
-}
-
-
-.qna-title{
-  font-size:15px;
-}
-.qna-date, .qna-unanswer, .qna-active{
+.qna-date, .qna-unanswer, .qna-answer, .qna-active{
   display: inline-block;
-  font-size:15px;
 }
 .qna-active {
   cursor: pointer;
@@ -144,6 +155,7 @@
     transform: rotate(90deg);
   }
 }
-.qna-unanswer{
-  margin:0 88px;
+.qna-unanswer, .qna-answer{
+  width: 180px;
+  text-align: center;
 }

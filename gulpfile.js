@@ -22,11 +22,13 @@ var target = {
     indexSrc : 'app/index.html',
     htmlSrc : 'app/front/*.html',
     adminSrc : 'app/admin/*.html',
+    serviceSrc : 'app/service/*.html',
     sassSrc : 'app/scss/**/*.scss',
     resourceSrc : 'app/source/**/*',
     jsSrc : 'app/js/**/*',
     htmlDest : 'dist/front',
     adminDest : 'dist/admin',
+    serviceDest : 'dist/service',
     cssDest : 'dist/css',
     jsDest : 'dist/js',
     resourceDest : 'dist/source',
@@ -63,6 +65,11 @@ gulp.task("html", function() {
     gulp
         .src(target.adminSrc)
         .pipe(gulp.dest(target.adminDest))
+        .pipe(reload({stream:true}));
+
+    gulp
+        .src(target.serviceSrc)
+        .pipe(gulp.dest(target.serviceDest))
         .pipe(reload({stream:true}));
 });
 
@@ -170,6 +177,7 @@ gulp.task("watch", function(){
         gulp.watch(target.jsSrc, ['javascript', 'inject']);
         gulp.watch(target.indexSrc, ['html', 'inject']);
         gulp.watch(target.adminSrc, ['html', 'inject']);
+        gulp.watch(target.serviceSrc, ['html', 'inject']);
         gulp.watch(target.htmlSrc, ['html', 'inject']);
         gulp.slurped = true; // step 3
     }

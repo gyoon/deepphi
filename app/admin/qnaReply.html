@@ -16,12 +16,21 @@
     <h1><a href="www.naver.com" class="h_logo">deep:phi</a></h1>
     <div class="util-menu">
         <div class="loginInfo">abc@gmail.com</div>
-        <a class="more-button" href="#" role="button"></a>
+        <a class="more-button" href="javascript:;"></a>
+        <div class="more-wrap-container">
+            <div class="bg"></div>
+            <div class="more-wrap">
+                <ul>
+                    <li><a href="javascript:;" data-remodal-target="pass">비밀번호 변경</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 <div class="bodyContainer">
     <nav>
-        <ul class="gnb">
+        <ul class="nav-list-wrap">
             <li class="image"><a href="image.html">Image</a></li>
             <li class="setting"><a href="setting.html">Setting</a></li>
             <li class="data"><a href="data.html">Data</a></li>
@@ -31,9 +40,9 @@
     </nav>
     <div class="section contents">
         <h2>Q&A</h2>
-        <div class="qna-btn-header">
-            <button type="button" class="btn-blu" data-remodal-target="modal">Preview</button>
-            <button type="button" class="btn-gry">Delete</button>
+        <div class="qna-reply-btn-wrap">
+            <button type="button" class="btn-normal preview-btn btn-blu" data-remodal-target="modal"><span>Preview</span></button>
+            <button type="button" class="btn-normal cancel-btn btn-gry"><span>Cancel</span></button>
         </div>
         <div class="qna-list-wrap">
             <div class="qna-reply-title">
@@ -46,13 +55,13 @@
                     <div class="reply">
                         <textarea rows="10"></textarea>
                     </div>
-                    <div class="origin">
+                    <div class="sender">
                         <span>2017.01.17</span>
                         <span>NAME</span>
                         <span>email@email.com</span>
                         <span>address</span>
                         <span>010-1234-5678</span>
-                        <div>소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
+                        <div class="email-message">소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 소개페이지에서
                             [Contact US] 를 통해 보낸 내용 제공 소개페이지에서 [Contact US] 를 통해 보낸 내용 제공</div>
                     </div>
                 </div>
@@ -62,6 +71,7 @@
 </div>
 <script src="/dist/lib/jquery/jquery.min.js"></script>
 
+<script src="/dist/lib/remodal/dist/remodal.js"></script>
 <script src="/dist/lib/tinycolor/tinycolor.js"></script>
 <script src="/dist/lib/pick-a-color/build/1.2.2/js/pick-a-color-1.2.2.min.js"></script>
 <script src="/dist/lib/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
@@ -74,11 +84,11 @@
         <button data-remodal-action="close" class="remodal-close"></button>
     </div>
     <div class="remodal-content">
-        <div class="title">Preview</div>
+        <div class="title">DEEP:PHI Re: Title</div>
         <div class="mail-box">
             <div class="mail-header">
-                <div class="ci">obs</div>
-                <div class="bi">deepphi</div>
+                <div class="ci"><image src="../source/admin/ci_obs_large.png"></div>
+                <div class="bi"><image src="../source/admin/bi_deephi.png"></div>
             </div>
             <div class="mail-content">
                 답변내용 작성 <br>
@@ -86,7 +96,7 @@
             </div>
             <div class="mail-footer">
                 <div class="ps">Sorry, We can not receive a reply </div>
-                <div class="company"><a href="#">DEEP:PHI by </a></div>
+                <div class="company">DEEP:PHI by <a href="http://www.obskorea.com" target="_blank"><image src="../source/admin/ci_obs_small.png"></a></div>
                 <address>403, Dolmaro, 172, Healthcare Innnocation Center,Bundang-gu, Seongnam-si, Gyeonggi-do, Korea</address>
                 <div class="info">
                     <span>great@obskorea.com</span>
@@ -97,7 +107,27 @@
         </div>
     </div>
     <div class="remodal-footer">
-        <button type="button" class="btn-blu">Send</button>
+        <button type="button" class="btn-normal pop-btn btn-blu"><span>Send</span></button>
+    </div>
+</div>
+
+<div class="remodal small" data-remodal-id="pass">
+    <div class="remodal-header">
+        <div class="title">Change password ?</div>
+        <button data-remodal-action="close" class="remodal-close"></button>
+    </div>
+    <div class="remodal-content">
+
+        <div class="pass-form">
+            <input type="password" placeholder="Current password">
+            <input type="password" placeholder="New password">
+            <input type="password" placeholder="Confirm password">
+        </div>
+
+    </div>
+    <div class="remodal-footer">
+        <button type="button" class="btn-normal pop-btn btn-blu"><span>Ok</span></button>
+        <button type="button" class="btn-normal pop-btn btn-gry"><span>Cancel</span></button>
     </div>
 </div>
 

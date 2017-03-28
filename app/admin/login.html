@@ -21,13 +21,14 @@
                 <input type="text" class="loginInput" value size="20" placeholder="E-mail" >
                 <input type="password" class="loginInput" placeholder="Password">
                 <div class="rememberLogin">
-                    <label>
-                        <input type="checkbox" value="forever">Remember Me
-                    </label>
+                    <div class="checkbox-ui">
+                        <input type="checkbox" value="forever" id="remember">
+                        <label for="remember">Remember Me</label>
+                    </div>
                 </div>
                 <div class="loginError">*정확한 정보를 입력해주세요.</div>
                 <div class="submit">
-                    <button type="button" class="button" onclick="location.href='/dist/admin/image.html'">Sign In</button>
+                    <button type="button" class="button btn-blu" onclick="location.href='/dist/admin/image.html'">Sign In</button>
                 </div>
             </form>
 

@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width">
     <!-- bower:css -->
     <!-- endinject -->
+    <link rel="stylesheet" href="/dist/lib/remodal/dist/remodal.css">
+    <link rel="stylesheet" href="/dist/lib/remodal/dist/remodal-default-theme.css">
+    <link rel="stylesheet" href="/dist/lib/datepicker/dist/datepicker.min.css">
     <link rel="stylesheet" href="/dist/css/admin.css">
     <!-- inject:css -->
     <!-- endinject -->
@@ -18,12 +21,21 @@
     <h1><a href="www.naver.com" class="h_logo">deep:phi</a></h1>
     <div class="util-menu">
         <div class="loginInfo">abc@gmail.com</div>
-        <a class="more-button" href="#" role="button"></a>
+        <a class="more-button" href="javascript:;"></a>
+        <div class="more-wrap-container">
+            <div class="bg"></div>
+            <div class="more-wrap">
+                <ul>
+                    <li><a href="javascript:;" data-remodal-target="pass">비밀번호 변경</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 <div class="bodyContainer">
 <nav>
-    <ul class="gnb">
+    <ul class="nav-list-wrap">
         <li class="image"><a href="image.html">Image</a></li>
         <li class="setting"><a href="setting.html">Setting</a></li>
         <li class="data on"><a href="data.html">Data</a></li>
@@ -67,100 +79,104 @@
                     <option>User</option>
                 </select>
             </div>
+            <div class="select-wrap user">
+                <input type='text' class="datepicker" data-toggle="datepicker" /> ~
+                <input type='text' class="datepicker" data-toggle="datepicker" />
+            </div>
             <div class="input-wrap">
                 <input type="text" class="" value size="20" placeholder="Search" >
             </div>
             <button type="button" class="search-btn btn-blu"></button>
         </div>
-        <button type="button" class="save-btn btn-gry"><span>Save</span></button>
+        <button type="button" class="btn-normal save-btn btn-gry"><span>Save</span></button>
     </div>
     <div class="board-wrap">
         <table class="board-type1">
             <caption>공지사항</caption>
             <colgroup>
-                <col class="" style="width: 10%">
-                <col class="" style="width: 14%">
-                <col class="" style="width: 46%">
-                <col class="" style="width: 10%">
+                <col class="" style="width: 20%">
+                <col class="" style="width: 20%">
+                <col class="" style="width: 20%">
+                <col class="" style="width: 20%">
                 <col class="" style="width: 20%">
             </colgroup>
             <tbody>
             <tr>
-                <th>구분</th>
-                <th>User</th>
-                <th>File Name</th>
-                <th>Size</th>
-                <th>등록일</th>
+                <th>Date</th>
+                <th>Hit</th>
+                <th>충치Hit</th>
+                <th>풍치Hit</th>
+                <th>낭종Hit</th>
             </tr>
             <tr>
-                <td>A</td>
-                <td>00001</td>
-                <td><a href="imageDetail.html">00001.jpg</a></td>
-                <td>2MB</td>
                 <td>2017.01.17.10:00</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
             </tr>
             <tr>
-                <td>U</td>
-                <td>00001</td>
-                <td>00001.jpg</td>
-                <td>2MB</td>
                 <td>2017.01.17.10:00</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
             </tr>
             <tr>
-                <td>A</td>
-                <td>00001</td>
-                <td>00001.jpg</td>
-                <td>2MB</td>
                 <td>2017.01.17.10:00</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
             </tr>
             <tr>
-                <td>A</td>
-                <td>00001</td>
-                <td>00001.jpg</td>
-                <td>2MB</td>
                 <td>2017.01.17.10:00</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
             </tr>
             <tr>
-                <td>A</td>
-                <td>00001</td>
-                <td>00001.jpg</td>
-                <td>2MB</td>
                 <td>2017.01.17.10:00</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
             </tr>
             <tr>
-                <td>A</td>
-                <td>00001</td>
-                <td>00001.jpg</td>
-                <td>2MB</td>
                 <td>2017.01.17.10:00</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
             </tr>
             <tr>
-                <td>A</td>
-                <td>00001</td>
-                <td>00001.jpg</td>
-                <td>2MB</td>
                 <td>2017.01.17.10:00</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
             </tr>
             <tr>
-                <td>A</td>
-                <td>00001</td>
-                <td>00001.jpg</td>
-                <td>2MB</td>
                 <td>2017.01.17.10:00</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
             </tr>
             <tr>
-                <td>A</td>
-                <td>00001</td>
-                <td>00001.jpg</td>
-                <td>2MB</td>
                 <td>2017.01.17.10:00</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
             </tr>
             <tr>
-                <td>A</td>
-                <td>00001</td>
-                <td>00001.jpg</td>
-                <td>2MB</td>
                 <td>2017.01.17.10:00</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
             </tr>
             </tbody>
         </table>
@@ -183,11 +199,34 @@
 </div>
 <script src="/dist/lib/jquery/jquery.min.js"></script>
 
+<script src="/dist/lib/remodal/dist/remodal.js"></script>
 <script src="/dist/lib/tinycolor/tinycolor.js"></script>
 <script src="/dist/lib/pick-a-color/build/1.2.2/js/pick-a-color-1.2.2.min.js"></script>
 <script src="/dist/lib/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
+<script src="/dist/lib/datepicker/dist/datepicker.min.js"></script>
+
 
 <script src="/dist/js/admin.js"></script>
+<script src="/dist/js/chart.js"></script>
 
+<div class="remodal small" data-remodal-id="pass">
+    <div class="remodal-header">
+        <div class="title">Change password ?</div>
+        <button data-remodal-action="close" class="remodal-close"></button>
+    </div>
+    <div class="remodal-content">
+
+        <div class="pass-form">
+            <input type="password" placeholder="Current password">
+            <input type="password" placeholder="New password">
+            <input type="password" placeholder="Confirm password">
+        </div>
+
+    </div>
+    <div class="remodal-footer">
+        <button type="button" class="btn-normal pop-btn btn-blu"><span>Ok</span></button>
+        <button type="button" class="btn-normal pop-btn btn-gry"><span>Cancel</span></button>
+    </div>
+</div>
 </body>
 </html>

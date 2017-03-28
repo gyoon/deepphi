@@ -3,7 +3,7 @@
   height: 100%;
   color:#fff;
   background-image: url(../source/admin/login_bg.png);
-  background-size: 100% auto;
+  background-size: 100% 100%;
   background-color: #006cb8;
   background-position: top center;
   background-repeat: no-repeat;
@@ -53,12 +53,12 @@
   color:#fff;
 }
 .rememberLogin input{
-  border:1px solid #fff;
+  /*border:1px solid #fff;
   background:#0060a3;
   width:24px;
   height: 24px;
   margin:-10px 10px -5px 0;
-  -webkit-appearance: none;
+  -webkit-appearance: none;*/
 }
 .loginError{
   position:absolute;
@@ -71,9 +71,11 @@
   clear:both;
   margin-top:50px;
 }
-.loginBox .submit .button{
+.loginBox .submit button{
   width: 490px;
   height:60px;
   background-color:#00375d;
+  color: #fff;
   font-size:22px;
 }
+.loginBox .submit button:hover{ background-color: #00223a;}

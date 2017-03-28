@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="/dist/lib/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/dist/lib/pick-a-color/build/1.2.0/css/pick-a-color-1.2.0.min.css">
+    <link rel="stylesheet" href="/dist/lib/remodal/dist/remodal.css">
+    <link rel="stylesheet" href="/dist/lib/remodal/dist/remodal-default-theme.css">
     <!-- bower:css -->
     <!-- endinject -->
     <link rel="stylesheet" href="/dist/css/admin.css">
@@ -21,12 +23,21 @@
     <h1><a href="www.naver.com" class="h_logo">deep:phi</a></h1>
     <div class="util-menu">
         <div class="loginInfo">abc@gmail.com</div>
-        <a class="more-button" href="#" role="button"></a>
+        <a class="more-button" href="javascript:;"></a>
+        <div class="more-wrap-container">
+            <div class="bg"></div>
+            <div class="more-wrap">
+                <ul>
+                    <li><a href="javascript:;" data-remodal-target="pass">비밀번호 변경</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 <div class="bodyContainer">
 <nav>
-    <ul class="gnb">
+    <ul class="nav-list-wrap">
         <li class="image"><a href="image.html">Image</a></li>
         <li class="setting on"><a href="setting.html">Setting</a></li>
         <li class="data"><a href="data.html">Data</a></li>
@@ -35,53 +46,111 @@
     </ul>
 </nav>
 <div class="section contents">
-    <h2>Image<span class="image-name">File name</span></h2>
+    <h2>setting</h2>
     <div class="disease-set-wrap">
         <div class="disease-set">
             <input type="text" value="f00" name="no-hex-demo" class="pick-a-color-no-spectrum form-control">
-            <div class="disease-cell"><input type="text" class="" value size="20" ></div>
-            <div class="disease-cell"><button type="button" class="save-btn btn-gry"><span>Save</span></button></div>
-            <div class="disease-cell"> <button type="button" class="save-btn btn-gry"><span>Save</span></button></div>
+            <div class="disease-cell"><input type="text" class="disease-form" size="20" value="충치" readonly></div>
+            <div class="disease-cell">
+                <button type="button" class="btn-normal edit-btn btn-gry"><span>Edit</span></button><button type="button" class="btn-normal save-btn btn-gry" data-remodal-target="modalSave"><span>Save</span></button>
+            </div>
+            <div class="disease-cell"><button type="button" class="btn-normal del-btn btn-gry"><span>Delete</span></button></div>
         </div>
         <div class="disease-set">
             <input type="text" value="f00" name="no-hex-demo" class="pick-a-color-no-spectrum form-control">
-            <div class="disease-cell"><input type="text" class="" value size="20" ></div>
-            <div class="disease-cell"><button type="button" class="save-btn btn-gry"><span>Save</span></button></div>
-            <div class="disease-cell"> <button type="button" class="save-btn btn-gry"><span>Save</span></button></div>
+            <div class="disease-cell"><input type="text" class="disease-form" size="20" value="풍치" readonly></div>
+            <div class="disease-cell">
+                <button type="button" class="btn-normal edit-btn btn-gry"><span>Edit</span></button><button type="button" class="btn-normal save-btn btn-gry"  data-remodal-target="modalSave"><span>Save</span></button>
+            </div>
+            <div class="disease-cell"><button type="button" class="btn-normal del-btn btn-gry"><span>Delete</span></button></div>
         </div>
         <div class="disease-set">
             <input type="text" value="f00" name="no-hex-demo" class="pick-a-color-no-spectrum form-control">
-            <div class="disease-cell"><input type="text" class="" value size="20" ></div>
-            <div class="disease-cell"><button type="button" class="save-btn btn-gry"><span>Save</span></button></div>
-            <div class="disease-cell"> <button type="button" class="save-btn btn-gry"><span>Save</span></button></div>
+            <div class="disease-cell"><input type="text" class="disease-form" size="20" value="하악신경" readonly></div>
+            <div class="disease-cell">
+                <button type="button" class="btn-normal edit-btn btn-gry"><span>Edit</span></button><button type="button" class="btn-normal save-btn btn-gry"  data-remodal-target="modalSave"><span>Save</span></button>
+            </div>
+            <div class="disease-cell"><button type="button" class="btn-normal del-btn btn-gry"><span>Delete</span></button></div>
         </div>
         <div class="disease-set">
             <input type="text" value="f00" name="no-hex-demo" class="pick-a-color-no-spectrum form-control">
-            <div class="disease-cell"><input type="text" class="" value size="20" ></div>
-            <div class="disease-cell"><button type="button" class="save-btn btn-gry"><span>Save</span></button></div>
-            <div class="disease-cell"> <button type="button" class="save-btn btn-gry"><span>Save</span></button></div>
+            <div class="disease-cell"><input type="text" class="disease-form" size="20" value="낭종" readonly></div>
+            <div class="disease-cell">
+                <button type="button" class="btn-normal edit-btn btn-gry"><span>Edit</span></button><button type="button" class="btn-normal save-btn btn-gry" data-remodal-target="modalSave"><span>Save</span></button>
+            </div>
+            <div class="disease-cell"><button type="button" class="btn-normal del-btn btn-gry"><span>Delete</span></button></div>
         </div>
         <div class="disease-set">
             <input type="text" value="f00" name="no-hex-demo" class="pick-a-color-no-spectrum form-control">
-            <div class="disease-cell"><input type="text" class="" value size="20" ></div>
-            <div class="disease-cell"><button type="button" class="save-btn btn-gry"><span>Save</span></button></div>
-            <div class="disease-cell"> <button type="button" class="save-btn btn-gry"><span>Save</span></button></div>
+            <div class="disease-cell"><input type="text" class="disease-form" size="20" value="상악동" readonly></div>
+            <div class="disease-cell">
+                <button type="button" class="btn-normal edit-btn btn-gry"><span>Edit</span></button><button type="button" class="btn-normal save-btn btn-gry" data-remodal-target="modalSave"><span>Save</span></button>
+            </div>
+            <div class="disease-cell"><button type="button" class="btn-normal del-btn btn-gry"><span>Delete</span></button></div>
         </div>
         <div class="disease-set">
             <input type="text" value="f00" name="no-hex-demo" class="pick-a-color-no-spectrum form-control">
-            <div class="disease-cell"><input type="text" class="" value size="20" ></div>
-            <div class="disease-cell"><button type="button" class="save-btn btn-gry"><span>Save</span></button></div>
-            <div class="disease-cell"> <button type="button" class="save-btn btn-gry"><span>Save</span></button></div>
+            <div class="disease-cell"><input type="text" class="disease-form" size="20" value="잇몸뼈라인" readonly></div>
+            <div class="disease-cell">
+                <button type="button" class="btn-normal edit-btn btn-gry"><span>Edit</span></button><button type="button" class="btn-normal save-btn btn-gry" data-remodal-target="modalSave"><span>Save</span></button>
+            </div>
+            <div class="disease-cell"><button type="button" class="btn-normal del-btn btn-gry"><span>Delete</span></button></div>
+        </div>
+        <div class="disease-set">
+            <input type="text" value="f00" name="no-hex-demo" class="pick-a-color-no-spectrum form-control">
+            <div class="disease-cell"><input type="text" class="disease-form" size="20" value="치아신경" readonly></div>
+            <div class="disease-cell"><button type="button" class="btn-normal edit-btn btn-gry"><span>Edit</span></button></div>
+            <div class="disease-cell">
+                <button type="button" class="btn-normal edit-btn btn-gry"><span>Edit</span></button><button type="button" class="btn-normal save-btn btn-gry" data-remodal-target="modalSave"><span>Save</span></button>
+            </div>
+            <div class="disease-cell"><button type="button" class="btn-normal add-btn btn-blu"><span>Add</span></button></div>
         </div>
     </div>
 </div>
 </div>
 <script src="/dist/lib/jquery/jquery.min.js"></script>
 
+<script src="/dist/lib/remodal/dist/remodal.js"></script>
 <script src="/dist/lib/tinycolor/tinycolor.js"></script>
 <script src="/dist/lib/requirejs/require.js"></script>
 <script src="/dist/lib/pick-a-color/build/1.2.2/js/pick-a-color-1.2.2.min.js"></script>
 
 <script src="/dist/js/admin.js"></script>
+
+<div class="remodal small" data-remodal-id="modalSave">
+    <div class="remodal-header">
+        <div class="title">변경된 내용으로 저장하시겠습니까?</div>
+        <button data-remodal-action="close" class="remodal-close"></button>
+    </div>
+    <div class="remodal-content">
+
+    </div>
+    <div class="remodal-footer">
+        <button type="button" class="btn-normal pop-btn btn-blu setting-save" data-remodal-action="close"><span>Ok</span></button>
+        <button type="button" class="btn-normal pop-btn btn-gry" data-remodal-action="close"><span>Cancel</span></button>
+    </div>
+</div>
+
+<div class="remodal small" data-remodal-id="pass">
+    <div class="remodal-header">
+        <div class="title">Change password ?</div>
+        <button data-remodal-action="close" class="remodal-close"></button>
+    </div>
+    <div class="remodal-content">
+
+        <div class="pass-form">
+            <input type="password" placeholder="Current password">
+            <input type="password" placeholder="New password">
+            <input type="password" placeholder="Confirm password">
+        </div>
+
+    </div>
+    <div class="remodal-footer">
+        <button type="button" class="btn-normal pop-btn btn-blu"><span>Ok</span></button>
+        <button type="button" class="btn-normal pop-btn btn-gry"><span>Cancel</span></button>
+    </div>
+</div>
+
+
 </body>
 </html>
