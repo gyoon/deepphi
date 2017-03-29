@@ -1,19 +1,19 @@
 @import "base/_reset";
 @import "base/_font";
 
-@import "layout/_header";
-@import "layout/_home";
-@import "layout/_about";
-@import "layout/_service";
-@import "layout/_demo";
-@import "layout/_blog";
-@import "layout/_contact";
+@import "front/_header";
+@import "front/_home";
+@import "front/_about";
+@import "front/_service";
+@import "front/_demo";
+@import "front/_blog";
+@import "front/_contact";
 
-@import "components/_slick";
-@import "components/_remodal";
-@import "components/_fileupload";
-@import "components/_menu-ham";
+@import "front/_slick";
+@import "front/_remodal";
+@import "front/_fileupload";
+@import "front/_menu-ham";
 
-@import "responsive/_destop";
-@import "responsive/_tablet";
-@import "responsive/_mobile";
+@import "front/_destop";
+@import "front/_tablet";
+@import "front/_mobile";

@@ -1,0 +1,408 @@
+@media screen and (max-width: 500px) /* Mobile */ {
+
+  input, select, textarea {
+    font-size: 13px;
+  }
+
+  input, select {
+    height: 30px;
+    padding: 0 10px;
+  }
+
+  .btn-normal {
+    width: 65px;
+    height: 30px;
+    background-image: none;
+    span {
+      font-size: 13px;
+      padding-left: 0;
+    }
+  }
+
+  .login {
+    height: 100%;
+    background-image: url(../resource/images/admin/login_bg.png);
+    background-size: auto 50%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    position: relative;
+    .loginBox{
+      width: 100%;
+      position:static;
+      background-color: transparent;
+      h1 {
+        padding-top: 135px;
+      }
+      .h_logo {
+        background-size: 220px auto;
+        font-size: 0;
+        display: block;
+        width: 215px;
+        height: 40px;
+        margin: 0 auto;
+      }
+      form {
+        margin-top: 30px;
+        padding: 0 55px;
+        .loginInput {
+          width: 100%;
+          height: 42px;
+          padding-left: 15px;
+          margin-top: 20px;
+          font-size: 13px;
+        }
+      }
+      .submit {
+        margin-top: 30px;
+        button {
+          width: 100%;
+          height: 40px;
+          background-color: #00375d;
+          color: #fff;
+          font-size: 14px;
+        }
+      }
+      .rememberLogin label {
+        font-size: 14px;
+      }
+      .loginError {
+        position: absolute;
+        top: 148px;
+        right: 55px;
+        color: #ffd200;
+        font-size: 10px;
+      }
+    }
+  }
+
+
+  .header {
+    width: 100%;
+    height: 50px;
+    padding: 10px 15px;
+    background-color: #006cb8;
+    color: #fff;
+    h1 {
+      float: left;
+    }
+    .loginInfo {
+      height: 20px;
+      font-size: 12px;
+      margin-top: 6px;
+    }
+    .util-menu {
+      margin-right: 0
+    }
+    .util-menu .more-button {
+      transform: scale(.5);
+      margin-left: 0;
+    }
+    .h_logo {
+      display: block;
+      width: 166px;
+      height: 33px;
+      margin-top: 4px;
+      padding: 0;
+      background: url(../resource/images/admin/logo.png) no-repeat;
+      background-size: 115px auto;
+      font-size: 0;
+    }
+  }
+
+  .bodyContainer {
+    min-height: inherit;
+
+    &:before {
+      display: none;
+    }
+    .search-btn {
+      width: 30px;
+      height: 30px;
+      background-size: 15px 15px;
+      background-image: url(../resource/images/admin/ico_search.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      vertical-align: middle;
+    }
+    nav {
+      width: 100%;
+      height: 42px;
+      float: none;
+      .nav-list-wrap {display: table;width: 100%;}
+      .nav-list-wrap li {
+        display: table-cell;
+        width: 25%;
+        position: relative;
+        height: 42px;
+        text-align: center;
+        border-bottom: 1px solid #c9c9c9;
+        &.qna {display: none}
+        &.on {
+          border: 0;
+          a {
+            background: none;
+          }
+        }
+        a {
+          vertical-align: middle;
+          font-size: 14px;
+          position: static;
+          text-decoration: none;
+          padding: 0 0 0 0;
+          background: none;
+          display: block;
+          width: 100%;
+          line-height: 42px;
+        }
+      }
+    }
+    .contents {
+      margin-left: 0;
+      padding: 0 15px;
+      width: 100%;
+      background-color: #fff;
+
+      .input-wrap {
+        width: 150px;
+      }
+      h2 {
+        padding: 0;
+        font-size: 18px;
+        margin: 20px 0;
+      }
+
+      .filter {
+        position: relative;
+        .search {
+          width: 100%;
+          float: none;
+          position: relative;
+          display: table;
+        }
+        .qty {
+          display: none;
+        }
+        .save-btn {
+          top:-45px;
+          right: 0;
+          position: absolute;
+          float: none;
+        }
+        .info {
+          float: left;
+          font-size: 13px;
+          padding-top: 0px;
+        }
+      }
+
+      .board-wrap {
+        margin-top: 10px;
+      }
+
+    }
+  }
+
+  .table-paging-wrap {
+    margin-top: 20px;
+    .show {
+      font-size: 13px;
+    }
+    .paging-wrap {
+      padding-top: 45px;
+      padding-bottom: 50px;
+      .paging-wrap > .paging a {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .board-type1 th, .board-type1 td {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  //table
+  .image-table {
+    tbody {
+      tr {
+        th, td {
+          &:nth-child(4), &:nth-child(5) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .user-table {
+    tbody {
+      tr {
+        th, td {
+          &:nth-child(2), &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+
+  //image-detail
+  .image-name {
+    font-size: 18px;
+    background: url(../resource/images/admin/ico_detail.png) no-repeat;
+    font-weight: normal;
+    background-size: 8px;
+    background-position: left 7px;
+    margin-left: 10px;
+    vertical-align: middle;
+    padding-left: 18px;
+  }
+
+  .disease-item li {
+    width: 100%;
+    color: #565656;
+    font-size: 13px;
+    padding: 5px 0!important;
+  }
+
+  .disease-item .item .itembox .value {
+    width: 50%;
+    font-size: 13px;
+  }
+
+  .disease-item .item .itembox {
+    padding: 4px 16px;
+    border: 1px solid #d1d1d1;
+    width: 100%;
+  }
+
+  .disease-item .item .itembox .percent {
+    padding-left: 10px;
+    vertical-align: middle;
+    width: 10%;
+    font-size: 13px;
+    font-weight: bold;
+    display: none;
+  }
+
+  //setting
+  .disease-set-wrap {
+    width: 100%;
+  }
+  .disease-set .disease-cell input {
+    width: 100%;
+  }
+
+  .disease-set .disease-cell {
+    padding: 0 0 0 5px;
+  }
+
+  .pick-a-color-markup .input-group-btn .color-dropdown {
+    height: 30px;
+  }
+  .pick-a-color-markup .color-preview {
+    width: 45px;
+    height: 30px;
+    margin: 0;
+  }
+  .color-dropdown .caret {
+    position: absolute;
+    top: 14px;
+    right: 7px;
+    padding: 0;
+  }
+
+  .disease-set {
+    position: relative;
+    &:nth-last-child(1) {
+      .disease-cell {
+        &:nth-last-child(1) {
+          padding: 0 0 0 0;
+        }
+      }
+    }
+    .add-btn {
+      position: absolute;
+      top:45px;
+      left:0;
+      width: 100%;
+    }
+  }
+
+
+  //data
+
+  .chartContainer .chart01 .text, .chartContainer .chart02 .text, .chartContainer .chart03 .text {
+    position: absolute;
+    top: calc(50% - 14px);
+    left: 0;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    span {
+      font-size: 15px
+    }
+  }
+  .chartContainer .chart01 .title, .chartContainer .chart02 .title, .chartContainer .chart03 .title {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    font-size: 14px;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+
+  .datepicker {
+    width: 45%;
+    background-image: none;
+  }
+
+  .remodal {
+    width: 100%;
+    .remodal-header {
+      padding: 8px 12px;
+      .title {
+        font-size: 14px;
+      }
+      .remodal-close {
+        position: relative;
+        &:before {
+          font-size: 25px;
+          line-height: 35px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: block;
+          width: 35px;
+          content: "\00d7";
+          text-align: center;
+        }
+      }
+    }
+    .remodal-content {
+      padding: 0 20px;
+      .pass-form {
+        margin-top: 10px;
+      }
+    }
+
+    .remodal-footer {
+      padding: 4px 0 12px 0;
+    }
+    &.small {
+      width: 100%;
+    }
+  }
+
+
+}

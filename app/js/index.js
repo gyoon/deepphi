@@ -1,11 +1,28 @@
 $(document).ready(function() {
 
     //page
-    $('#fullpage').fullpage({
-        anchors: ['home', 'about', 'demo', 'service', 'blog', 'contact'],
-        menu: '#menu',
-        css3: true,
-        normalScrollElements: '.remodal'
+    var fullPageCreated = false;
+    createFullpage();
+
+    function createFullpage() {
+        if(fullPageCreated === false) {
+            fullPageCreated = true;
+            $('#fullpage').fullpage({
+                anchors: ['home', 'about', 'demo', 'service', 'blog', 'contact'],
+                menu: '#menu',
+                css3: true,
+                normalScrollElements: '.remodal'
+            });
+        }
+    }
+
+    $(window).on( "orientationchange", function( event ) {
+        if(window.innerHeight > window.innerWidth){
+            createFullpage();
+        } else {
+            fullPageCreated = false;
+            $.fn.fullpage.destroy('all');
+        }
     });
 
 

@@ -2,14 +2,14 @@
 
 .qq-drop-processing-spinner {
   display: inline-block;
-  background: url("../source/images/processing.gif");
+  background: url("../resource/images/front/processing.gif");
   width: 24px;
   height: 24px;
   vertical-align: text-bottom;
 }
 .qq-edit-filename-icon {
   display: none;
-  background: url("../source/images/edit.gif");
+  background: url("../resource/images/front/edit.gif");
   width: 15px;
   height: 15px;
   vertical-align: text-bottom;
@@ -49,7 +49,7 @@
   border: 2px #c1c1c1 dashed;
   padding: 60px 10px 0 10px;
   position: relative;
-  background: url("../source/images/file.png");
+  background: url("../resource/images/front/file.png");
   background-repeat: no-repeat;
   background-position: center 60px;
 }
@@ -58,7 +58,7 @@
   display: inline-block;
   width: 162px;
   height: 162px;
-  background: url('../source/images/file_cn.png');
+  background: url('../resource/images/front/file_cn.png');
   position: absolute;
   top: 60px;
   left: 50%;

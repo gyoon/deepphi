@@ -24,14 +24,14 @@ var target = {
     adminSrc : 'app/admin/*.html',
     serviceSrc : 'app/service/*.html',
     sassSrc : 'app/scss/**/*.scss',
-    resourceSrc : 'app/source/**/*',
+    resourceSrc : 'app/resource/**/*.*',
     jsSrc : 'app/js/**/*',
     htmlDest : 'dist/front',
     adminDest : 'dist/admin',
     serviceDest : 'dist/service',
     cssDest : 'dist/css',
     jsDest : 'dist/js',
-    resourceDest : 'dist/source',
+    resourceDest : 'dist/resource',
     fontDest : 'dist/font',
     dest : 'dist/'
 };

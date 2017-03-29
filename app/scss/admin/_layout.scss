@@ -83,30 +83,30 @@ button span{
 }
 .save-btn{
   float:right;
-  background-image: url("../source/admin/ico_save.png");
+  background-image: url("../resource/images/admin/ico_save.png");
   background-repeat: no-repeat;
   background-position: left 22px center;
 }
 .search-btn{
   width:48px;
   height: 42px;
-  background-image: url("../source/admin/ico_search.png");
+  background-image: url("../resource/images/admin/ico_search.png");
   background-repeat: no-repeat;
   background-position: center center;
   vertical-align: middle;
 }
 .edit-btn{
-  background-image: url("../source/admin/ico_edit.png");
+  background-image: url("../resource/images/admin/ico_edit.png");
   background-repeat: no-repeat;
   background-position: left 24px center;
 }
 .del-btn{
-  background-image: url("../source/admin/ico_delete.png");
+  background-image: url("../resource/images/admin/ico_delete.png");
   background-repeat: no-repeat;
   background-position: left 15px center;
 }
 .add-btn{
-  background-image: url("../source/admin/ico_add.png");
+  background-image: url("../resource/images/admin/ico_add.png");
   background-repeat: no-repeat;
   background-position: left 24px center;
 }
@@ -128,7 +128,7 @@ button span{
   width: 166px;
   height: 33px;
   padding:20px  0;
-  background: url("../source/admin/logo.png") no-repeat;
+  background: url("../resource/images/admin/logo.png") no-repeat;
   background-size: 166px auto;
   font-size:0;
 }
@@ -156,7 +156,7 @@ nav {
   height: 28px;
   margin-left:24px;
   padding:0 16px;
-  background: url("../source/admin//btn_more.png") center no-repeat;
+  background: url("../resource/images/admin//btn_more.png") center no-repeat;
 }
 .more-wrap-container {
   .bg {
@@ -180,6 +180,7 @@ nav {
     right:30px;
     width:145px;
     font-size: 15px;
+    background-color: #fff;
     border-left: 1px solid #d1d1d1;
     border-right: 1px solid #d1d1d1;
     -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2);
@@ -236,43 +237,43 @@ nav {
 }
 .nav-list-wrap li.image a{
   width:26px;
-  background: url("../source/admin/ico_gnb.png") no-repeat 0 3px;
+  background: url("../resource/images/admin/ico_gnb.png") no-repeat 0 3px;
   padding:0 0 0 38px;
 }
 .nav-list-wrap li.image.on a{
-  background: url("../source/admin/ico_gnb.png") no-repeat -48px 3px;
+  background: url("../resource/images/admin/ico_gnb.png") no-repeat -48px 3px;
 }
 .nav-list-wrap li.setting a{
   width:28px;
-  background: url("../source/admin/ico_gnb.png") no-repeat 0 -42px;
+  background: url("../resource/images/admin/ico_gnb.png") no-repeat 0 -42px;
   padding:0 0 0 38px;
 }
 .nav-list-wrap li.setting.on a{
-  background: url("../source/admin/ico_gnb.png") no-repeat -48px -42px;
+  background: url("../resource/images/admin/ico_gnb.png") no-repeat -48px -42px;
 }
 .nav-list-wrap li.data a{
   width:28px;
-  background: url("../source/admin/ico_gnb.png") no-repeat 0 -90px;
+  background: url("../resource/images/admin/ico_gnb.png") no-repeat 0 -90px;
   padding:0 0 0 38px;
 }
 .nav-list-wrap li.data.on a{
-  background: url("../source/admin/ico_gnb.png") no-repeat -48px -90px;
+  background: url("../resource/images/admin/ico_gnb.png") no-repeat -48px -90px;
 }
 .nav-list-wrap li.user a{
   width:22px;
-  background: url("../source/admin/ico_gnb.png") no-repeat 0 -138px;
+  background: url("../resource/images/admin/ico_gnb.png") no-repeat 0 -138px;
   padding:0 0 0 38px;
 }
 .nav-list-wrap li.user.on a{
-  background: url("../source/admin/ico_gnb.png") no-repeat -48px -138px;
+  background: url("../resource/images/admin/ico_gnb.png") no-repeat -48px -138px;
 }
 .nav-list-wrap li.qna a{
   width:24px;
-  background: url("../source/admin/ico_gnb.png") no-repeat 0 -184px;
+  background: url("../resource/images/admin/ico_gnb.png") no-repeat 0 -184px;
   padding:0 0 0 38px;
 }
 .nav-list-wrap li.qna.on a{
-  background: url("../source/admin/ico_gnb.png") no-repeat -48px -184px;
+  background: url("../resource/images/admin/ico_gnb.png") no-repeat -48px -184px;
 }
 .bodyContainer {
   position: relative;
@@ -406,16 +407,16 @@ table {
   margin: 7px 12px;
 }
 .prev-btn .spr{
-  background: url("../source/admin/btn_page.png") no-repeat 0 0;
+  background: url("../resource/images/admin/btn_page.png") no-repeat 0 0;
 }
 .prev-btn:hover .spr{
-  background: url("../source/admin/btn_page.png") no-repeat -1px -27px;
+  background: url("../resource/images/admin/btn_page.png") no-repeat -1px -27px;
 }
 .next-btn .spr{
-  background: url("../source/admin/btn_page.png") no-repeat -20px 0;
+  background: url("../resource/images/admin/btn_page.png") no-repeat -20px 0;
 }
 .next-btn:hover .spr {
-  background: url("../source/admin/btn_page.png") no-repeat -19px -27px;
+  background: url("../resource/images/admin/btn_page.png") no-repeat -19px -27px;
 }
 .prev-btn:hover, .prev-btn:active, .next-btn:hover, .next-btn:active{
   border:1px solid #444;
@@ -544,7 +545,7 @@ table {
 .datepicker {
   width: 125px;
   text-align: right;
-  background-image: url("../source/admin/ico_calender.png");
+  background-image: url("../resource/images/admin/ico_calender.png");
   background-position:10px center;
   background-repeat: no-repeat;
 }
@@ -557,11 +558,11 @@ table {
     [type=checkbox] {
       &:checked {
         + label {
-          background-image: url("../source/admin/check_on.png");
+          background-image: url("../resource/images/admin/check_on.png");
         }
       }
       + label {
-        background-image: url("../source/admin/check_off.png");
+        background-image: url("../resource/images/admin/check_off.png");
       }
     }
   }
@@ -575,14 +576,14 @@ table {
     &:checked {
       + label {
         padding-left: 30px;
-        background-image: url("../source/admin/login_check_on.png");
+        background-image: url("../resource/images/admin/login_check_on.png");
         background-repeat: no-repeat;
       }
     }
     + label {
       cursor: pointer;
       padding-left: 30px;
-      background-image: url("../source/admin/login_check_off.png");
+      background-image: url("../resource/images/admin/login_check_off.png");
       background-repeat: no-repeat;
     }
   }
@@ -600,14 +601,14 @@ table {
     &:checked {
       + label {
         padding-left: 30px;
-        background-image: url("../source/admin/radio_on.png");
+        background-image: url("../resource/images/admin/radio_on.png");
         background-repeat: no-repeat;
       }
     }
     + label {
       cursor: pointer;
       padding-left: 30px;
-      background-image: url("../source/admin/radio_off.png");
+      background-image: url("../resource/images/admin/radio_off.png");
       background-repeat: no-repeat;
     }
   }

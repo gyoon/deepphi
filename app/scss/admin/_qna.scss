@@ -2,12 +2,12 @@
     >button{width:124px}
   .preview-btn{
     margin-right: 6px;
-    background-image: url(../source/admin/ico_preview.png);
+    background-image: url(../resource/images/admin/ico_preview.png);
     background-repeat: no-repeat;
     background-position: left 20px center;
   }
   .cancel-btn{
-  background-image: url(../source/admin/ico_cancel.png);
+  background-image: url(../resource/images/admin/ico_cancel.png);
   background-repeat: no-repeat;
   background-position: left 26px center;
 }
@@ -76,7 +76,7 @@
       margin: 30px 30px 0 0;
       > button {margin-bottom: 6px}
       .reply-btn {
-        background-image: url(../source/admin/ico_reply.png);
+        background-image: url(../resource/images/admin/ico_reply.png);
         background-repeat: no-repeat;
         background-position: left 20px center;
         > span {

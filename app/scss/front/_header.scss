@@ -6,7 +6,7 @@
     box-shadow: 1px 0 7px rgba(0, 0, 0, .11);
     .logo {
       display: block;
-      background-image: url("../source/images/logo.png");
+      background-image: url("../resource/images/front/logo.png");
       width: 340px;
       height: 66px;
       background-size: 340px 66px;
@@ -20,13 +20,14 @@
   background-color: rgba(255, 255, 255, 1);
   border-bottom: 1px #dfe0e1 solid;
   position: fixed;
+  top:0;
   z-index: 100;
   width: 100%;
   transition: .6s cubic-bezier(.4,.38,0,1.19);
   .logo {
     display: block;
     float:left;
-    background-image: url("../source/images/logo.png");
+    background-image: url("../resource/images/front/logo.png");
     width: 234px;
     height: 46px;
     background-size: 234px 46px;
@@ -148,5 +149,113 @@
   }
   .sendForm {
     transform: translate(0px, 200px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.fp-destroyed {
+  .home {
+    height: 500px;
+    overflow: hidden;
+    .homeDesc {
+      position: absolute;
+      left: 50px;
+      width: inherit;
+      top:140px;
+      opacity: 1;
+      font-size: 24px;
+    }
+    .uiHand {
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      width: 100%;
+      height: 100%;
+      transform: translate(0, 10px);
+    }
+    .mouse {
+      bottom: 90px;
+      left: 50%;
+      margin-left: -45px;
+      font-size: 26px;
+      font-weight: bold;
+      color: #00142b;
+      padding-top: 125px;
+      transition: 0.6s cubic-bezier(0.4, 0.38, 0, 1.19);
+      opacity: 0;
+    }
+  }
+
+  .about {
+    height: 800px;
+  }
+
+  .demo {
+    height: 1200px;
+    .desc {
+      text-align: center;
+      color: #262626;
+      font-size: 22px;
+      transition: 1.2s cubic-bezier(0.4, 0.38, 0, 1.19);
+      opacity:1;
+      line-height: 160%;
+      transform: translate(0);
+    }
+  }
+
+  .demo .upload {
+    opacity: 1;
+    width: 80%;
+    max-width: 1250px;
+    margin: 30px auto 0px auto;
+    transform: translate(0px, 0px);
+  }
+
+  .service {
+    height: 800px;
+  }
+
+  .blog {
+    height: 800px;
+
+    .slider {
+      margin: 50px auto 0 auto;
+      transform: translate(0);
+      opacity: 1;
+    }
+
+  }
+
+  .contact {
+    height: 800px;
+
+    .desc {
+      opacity:1;
+      transform: translate(0);
+    }
+
+    .sendForm, .btnForm {
+      opacity: 1;
+      margin: 40px auto 0 auto;
+      transform: translate(0);
+    }
+
+  }
+
+  .about .title, .demo .title, .service .title, .blog .title, .contact .title {
+    font-size: 38px;
+    padding-top: 50px;
+    margin-top: 0;
+    opacity: 1;
+    transform: translate(0px, 0px);
   }
 }
