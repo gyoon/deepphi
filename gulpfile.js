@@ -24,7 +24,7 @@ var target = {
     adminSrc : 'app/admin/*.html',
     serviceSrc : 'app/service/*.html',
     sassSrc : 'app/scss/**/*.scss',
-    resourceSrc : 'app/resource/**/*.*',
+    resourceSrc : 'app/resource/**/**',
     jsSrc : 'app/js/**/*',
     htmlDest : 'dist/front',
     adminDest : 'dist/admin',
