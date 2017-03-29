@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    if ($(window).width() <= 500) {
+    if ($(window).width() <= 979) {
         // is mobile device
         // chart
         $('.chart01').easyPieChart({

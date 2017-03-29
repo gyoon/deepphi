@@ -1,4 +1,4 @@
-@media screen and (max-width: 500px) /* Mobile */ {
+@media screen and (max-width: /*500px*/979px) /* Mobile */ {
 
   input, select, textarea {
     font-size: 13px;
@@ -299,6 +299,7 @@
 
   .disease-set .disease-cell {
     padding: 0 0 0 5px;
+    width: 100%;
   }
 
   .pick-a-color-markup .input-group-btn .color-dropdown {
