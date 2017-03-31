@@ -73,7 +73,10 @@ $(document).ready(function() {
 
 
 
-    //image
+    //table sort toggle
+    $( ".board-type1 .ico_arr" ).click(function() {
+        $( this ).toggleClass( "down" );
+    });
 
 
 

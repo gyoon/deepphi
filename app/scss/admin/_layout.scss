@@ -292,6 +292,7 @@ nav {
 .contents{
   margin-left: 266px;
   width: calc(100% - 320px);
+  padding-bottom: 50px;
   background-color: #fff;
 }
 .contents h2{
@@ -338,6 +339,20 @@ table {
   margin-top:20px
 }
 .board-type1{width: 100%; border-top:2px solid #000}
+
+.board-type1 .ico_arr {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-image: url("../resource/images/admin/ico_arr.png");
+  background-repeat: no-repeat;
+  margin-left: 8px;
+  cursor: pointer;
+  &.down {
+    transform: rotate(180deg);
+  }
+}
+
 
 .board-type1 th{
   text-align: center;
@@ -548,6 +563,7 @@ table {
   background-image: url("../resource/images/admin/ico_calender.png");
   background-position:10px center;
   background-repeat: no-repeat;
+  vertical-align: middle;
 }
 
 

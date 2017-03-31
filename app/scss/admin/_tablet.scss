@@ -1,11 +1,11 @@
-@media screen and (max-width: 500px) /* Mobile */ {
+@media screen and (max-width: /*500px*/979px) /* Mobile */ {
 
   input, select, textarea {
     font-size: 13px;
   }
 
   input, select {
-    height: 30px;
+    height: 40px;
     padding: 0 10px;
     -webkit-border-radius: 0px;
     -webkit-appearance: none;
@@ -19,11 +19,11 @@
 
   .btn-normal {
     width: 65px;
-    height: 30px;
+    height: 40px;
     background-image: none;
     vertical-align: middle;
     span {
-      font-size: 13px;
+      font-size: 14px;
       padding-left: 0;
       height: 20px;
       position: relative;
@@ -68,10 +68,10 @@
         margin-top: 30px;
         button {
           width: 100%;
-          height: 40px;
+          height: 50px;
           background-color: #00375d;
           color: #fff;
-          font-size: 14px;
+          font-size: 16px;
         }
       }
       .rememberLogin label {
@@ -84,7 +84,7 @@
         top: 148px;
         right: 55px;
         color: #ffd200;
-        font-size: 10px;
+        font-size: 12px;
       }
     }
   }
@@ -92,8 +92,8 @@
 
   .header {
     width: 100%;
-    height: 50px;
-    padding: 10px 15px;
+    height: 64px;
+    padding: 17px 15px;
     background-color: #006cb8;
     color: #fff;
     h1 {
@@ -101,7 +101,7 @@
     }
     .loginInfo {
       height: 20px;
-      font-size: 12px;
+      font-size: 13px;
       margin-top: 6px;
     }
     .util-menu {
@@ -127,9 +127,9 @@
     position: absolute;
     z-index: 10;
     display: none;
-    top: 50px;
+    top: 64px;
     right: 15px;
-    width: 100px;
+    width: 130px;
     &:before {
       position: absolute;
       top: -10px;
@@ -144,9 +144,9 @@
     }
     ul li a {
       text-align: center;
-      font-size: 13px;
-      padding: 10px 0;
-      height: 40px;
+      font-size: 15px;
+      padding: 15px 0;
+      height: 50px;
       display: block;
       border-bottom: 1px solid #d1d1d1;
     }
@@ -160,10 +160,9 @@
     }
     .search-btn {
       width: 100%;
-      min-width: 30px;
-      max-width: 30px;
-      height: 30px;
-      background-size: 15px 15px;
+      min-width: 40px;
+      max-width: 40px;
+      height: 40px;
       background-image: url(../resource/images/admin/ico_search.png);
       background-repeat: no-repeat;
       background-position: center center;
@@ -172,7 +171,7 @@
     }
     nav {
       width: 100%;
-      height: 42px;
+      height: 54px;
       float: none;
       .nav-list-wrap {display: table;width: 100%;}
       .nav-list-wrap li {
@@ -191,14 +190,14 @@
         }
         a {
           vertical-align: middle;
-          font-size: 14px;
+          font-size: 16px;
           position: static;
           text-decoration: none;
           padding: 0 0 0 0;
           background: none;
           display: block;
           width: 100%;
-          line-height: 42px;
+          line-height: 54px;
         }
       }
     }
@@ -219,13 +218,13 @@
       }
       h2 {
         padding: 0;
-        font-size: 18px;
+        font-size:26px;
         margin: 20px 0;
       }
 
       .filter {
         position: relative;
-        height: 36px;
+        height: 46px;
         .search {
           width: 100%;
           float: none;
@@ -270,7 +269,7 @@
   }
 
   .board-type1 th, .board-type1 td {
-    padding: 6px 10px;
+    padding:10px 10px;
     font-size: 14px;
   }
 
@@ -306,7 +305,7 @@
 
   //image-detail
   .image-name {
-    font-size: 18px;
+    font-size: 20px;
     background: url(../resource/images/admin/ico_detail.png) no-repeat;
     font-weight: normal;
     background-size: 8px;
@@ -374,16 +373,16 @@
   }
 
   .pick-a-color-markup .input-group-btn .color-dropdown {
-    height: 30px;
+    height: 40px;
   }
   .pick-a-color-markup .color-preview {
     width: 45px;
-    height: 30px;
+    height: 40px;
     margin: 0;
   }
   .color-dropdown .caret {
     position: absolute;
-    top: 14px;
+    top: 19px;
     right: 7px;
     padding: 0;
   }

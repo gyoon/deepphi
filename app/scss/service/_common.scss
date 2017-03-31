@@ -187,11 +187,65 @@ button span{
   padding: 30px 30px 30px;
   height: calc(100% - 90px);
   background-color: #000;
+  transition: 0.5s all ease;
+  &.min {
+    transform: translate(-360px, 0);
+    + .left-inter-section{
+      transform: translate(-360px, 0);
+      + .contents{
+        margin-left: - 360px;
+        width:calc(100% - 100px);
+      }
+    }
+  }
+  &.max {
+    width:450px;
+    + .left-inter-section{
+      left: 450px;
+      + .contents{
+        width:calc(100% - 510px);
+      }
+    }
+  }
+}
+.left-inter-section{
+  position: absolute;
+  width:50px;
+  left: 360px;
+  height: calc(100% - 90px);
+  background-color: #0a0a0a;
+  padding-top: 20px;
+  transition: 0.5s all ease;
+  .min {
+    cursor: pointer;
+    margin: 0 auto;
+    width: 18px;
+    height: 18px;
+    background-image: url("../resource/images/service/ico_mini.png");
+    background-repeat: no-repeat;
+  }
+  .normal {
+    cursor: pointer;
+    margin: 25px auto;
+    width: 18px;
+    height: 18px;
+    background-image: url("../resource/images/service/ico_normal.png");
+    background-repeat: no-repeat;
+  }
+  .max {
+    cursor: pointer;
+    margin: 0 auto;
+    width: 18px;
+    height: 18px;
+    background-image: url("../resource/images/service/ico_full.png");
+    background-repeat: no-repeat;
+  }
 }
 .contents{
   padding:30px 0 0 60px;
   float:left;
   width:calc(100% - 420px);
+  transition: 0.5s all ease;
 }
 .input-wrap{
  width:246px;
@@ -207,10 +261,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.filter {
+  &:after {content: ''; display: block;clear: both}
+}
 .board-wrap{
   margin-top:20px
 }
-.board-type1{width: 300px; border-top:2px solid #3c3c3c}
+.board-type1{width: 100%; border-top:2px solid #3c3c3c; table-layout: fixed;}
 
 .board-type1 th{
   text-align: center;
@@ -231,6 +288,10 @@ table {
   border-left: 1px solid #292929;
   box-sizing:border-box;
   color:#d7d7d7;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  word-wrap:normal;
+  overflow: hidden;
 }
 .board-type1 tr td a{
   color:#d7d7d7;
@@ -466,7 +527,7 @@ table {
 
 //data
 .data.contents{
-  padding: 30px 60px 0 60px;
+  padding: 30px 60px 30px 60px;
   width: 100%;
   .board-type1{
     width: 100%;
@@ -624,4 +685,45 @@ table {
   background-position:10px center;
   background-repeat: no-repeat;
   vertical-align: middle;
+}
+
+.chartContainer {
+  overflow: hidden;
+  &:after {
+    content: '';
+    display: inline-block;
+    clear: both;
+  }
+  >div {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+  }
+
+  .chart01, .chart02, .chart03 {
+    position: relative;
+    margin-bottom: 90px;
+    .text {
+      position: absolute;
+      top: calc(50% - 30px);
+      left: 0;
+      font-size: 60px;
+      font-weight: bold;
+      width: 100%;
+      height: 100%;
+      line-height: 100%;
+      vertical-align: middle;
+      text-align: center;
+      span {font-weight: normal;font-size: 30px}
+    }
+    .title {
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      font-size: 20px;
+      width: 100%;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
 }

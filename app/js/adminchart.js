@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    if ($(window).width() <= 979) {
+    if ($(window).width() <= 500) {
         // is mobile device
         // chart
         $('.chart01').easyPieChart({
@@ -30,6 +30,34 @@ $(document).ready(function() {
             scaleColor: 'transparent'
         });
 
+    } else if($(window).width() <= 979) {
+        // chart
+        $('.chart01').easyPieChart({
+            lineWidth: 12,
+            size: 190,
+            trackColor: '#d1d1d1',
+            barColor: '#ff0000',
+            lineCap: 'butt ',
+            scaleColor: 'transparent'
+        });
+
+        $('.chart02').easyPieChart({
+            lineWidth: 12,
+            size: 190,
+            trackColor: '#d1d1d1',
+            barColor: '#0060f0',
+            lineCap: 'butt',
+            scaleColor: 'transparent'
+        });
+
+        $('.chart03').easyPieChart({
+            lineWidth: 12,
+            size: 190,
+            trackColor: '#d1d1d1',
+            barColor: '#ffd200',
+            lineCap: 'butt',
+            scaleColor: 'transparent'
+        });
     } else {
         // chart
         $('.chart01').easyPieChart({

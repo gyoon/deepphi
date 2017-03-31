@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- bower:css -->
     <!-- endinject -->
+    <link rel="stylesheet" href="/dist/lib/datepicker/dist/datepicker.min.css">
     <link rel="stylesheet" href="/dist/css/service.css">
     <!-- inject:css -->
     <!-- endinject -->
@@ -50,15 +51,33 @@
         </ul>
     </nav>
     <div class="service data contents ">
-        <div class="btn-wrap">
-            <button type="button" class="btn-normal save-btn btn-gry" data-remodal-target="modal"><span>Save</span></button>
-        </div>
-        <div class="search">
-            <div class="date-wrap">
-                <input type='text' class="datepicker" data-toggle="datepicker" /> ~
-                <input type='text' class="datepicker" data-toggle="datepicker" />
+
+        <div class="chartContainer">
+            <div class="chart01" data-percent="73">
+                <div class="text">73<span>%</span></div>
+                <div class="title">충치</div>
             </div>
-            <button type="button" class="search-btn btn-blu"></button>
+            <div class="chart02" data-percent="40">
+                <div class="text">40<span>%</span></div>
+                <div class="title">풍치</div>
+            </div>
+            <div class="chart03" data-percent="25">
+                <div class="text">25<span>%</span></div>
+                <div class="title">낭종</div>
+            </div>
+        </div>
+
+        <div class="filter">
+            <div class="btn-wrap">
+                <button type="button" class="btn-normal save-btn btn-gry" data-remodal-target="modal"><span>Save</span></button>
+            </div>
+            <div class="search">
+                <div class="date-wrap">
+                    <input type='text' class="datepicker" data-toggle="datepicker" /> ~
+                    <input type='text' class="datepicker" data-toggle="datepicker" />
+                </div>
+                <button type="button" class="search-btn btn-blu"></button>
+            </div>
         </div>
         <div class="board-wrap">
             <table class="board-type1">
@@ -170,8 +189,13 @@
 </div>
 
 <script src="/dist/lib/jquery/jquery.min.js"></script>
-<script src="/dist/lib/remodal/dist/remodal.js"></script>
 
+<script src="/dist/lib/datepicker/dist/datepicker.min.js"></script>
+<script src="/dist/lib/remodal/dist/remodal.js"></script>
+<script src="/dist/lib/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
+
+<script src="/dist/js/service.js"></script>
+<script src="/dist/js/servicechart.js"></script>
 
 </body>
 </html>
