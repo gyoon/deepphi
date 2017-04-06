@@ -50,6 +50,7 @@
       margin-top: -1px;
       .qna-title-wrap{
         float:left;
+        a{margin-top:2px}
       }
       .info-wrap{
         float:right;
@@ -127,6 +128,7 @@
 }
 .qna-date, .qna-unanswer, .qna-answer, .qna-active{
   display: inline-block;
+  vertical-align: middle;
 }
 .qna-active {
   cursor: pointer;

@@ -62,7 +62,10 @@
   &:hover .itembox, &.on .itembox {
       border:1px solid #444;
       font-weight: bold;
-    }
+  }
+  &.on .percent {
+    display: inline-block!important;
+  }
   .itembox {
     padding:16px 16px;
     border: 1px solid #d1d1d1;
@@ -96,11 +99,45 @@
     .percent{
       padding-left: 10px;
       vertical-align: middle;
-      display: inline-block;
+      display: none;
       width: 20%;
       font-size:14px;
       font-weight: bold;
-      display: none;
     }
+  }
+}
+
+.textBox {
+  background: #f1f1f1;
+  margin: 30px 0;
+  padding: 30px;
+  min-height: 160px;
+  box-sizing: border-box;
+  border-top:1px solid #b8b8b8;
+  border-bottom:1px solid #b8b8b8;
+  &:after {
+    content: '';
+    display: inline-block;
+    clear: both;
+  }
+  .user {
+    float: left;
+    width: 300px;
+    padding-right: 14px;
+  }
+  .comments {
+    float: left;
+    width: calc(100% - 300px);
+  }
+  input {
+    width: 100%;
+    border-color: #c2c2c2;
+  }
+  textarea {
+    width: 100%;
+    border-color: #c2c2c2;
+    resize: none;
+    padding: 10px;
+    line-height: 24px;
   }
 }

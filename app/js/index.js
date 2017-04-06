@@ -22,6 +22,15 @@ $(document).ready(function() {
         } else {
             fullPageCreated = false;
             $.fn.fullpage.destroy('all');
+
+            var sectionH =  $(window).height();
+            $('.section').css('height', sectionH);
+
+            $('.section').each(function( index ) {
+                var value = $(this).attr('class').substring(8);
+                $(this).attr('id', value)
+            });
+
         }
     });
 
@@ -45,23 +54,6 @@ $(document).ready(function() {
             }
         ]
     });
-    /*var isMobile = $(window).width();
-    function blogInit() {
-        if(isMobile < 980) {
-
-        } else {
-
-        }
-    }
-     blogInit();
-
-     $( window ).resize(function() {
-     $('.autoplay').slick('unslick');
-     blogInit();
-     });
-    */
-
-
 
 
     ///demo

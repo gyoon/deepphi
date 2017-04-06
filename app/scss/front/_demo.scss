@@ -7,24 +7,22 @@
     font-size: 58px;
     span {font-weight: bold}
     transition: .9s cubic-bezier(.4,.38,0,1.19);
-    opacity: 0;
   }
   .desc {
     text-align: center;
     color: #262626;
     font-size: 22px;
     transition: 1.2s cubic-bezier(.4,.38,0,1.19);
-    opacity: 0;
     line-height: 160%;
     span {color: #006cb8; font-size: 22px;}
   }
 
   .upload {
     transition: 1.4s cubic-bezier(.4,.38,0,1.19);
-    opacity: 0;
     width: 80%;
     max-width: 1250px;
-    margin: 100px auto 0px auto;
+    margin-left: auto;
+    margin-right: auto;
     .qq-uploader {
       min-height: 443px;
     }
@@ -69,13 +67,10 @@
 .fp-viewing-demo {
   .demo {
     .title {
-      opacity: 1;
     }
     .desc {
-      opacity: 1;
     }
     .upload {
-      opacity: 1;
     }
   }
 }

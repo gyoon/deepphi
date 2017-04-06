@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width">
     <!-- bower:css -->
     <!-- endinject -->
+    <link rel="stylesheet" href="/dist/lib/remodal/dist/remodal.css">
+    <link rel="stylesheet" href="/dist/lib/remodal/dist/remodal-default-theme.css">
     <link rel="stylesheet" href="/dist/css/service.css">
     <!-- inject:css -->
     <!-- endinject -->
@@ -66,9 +68,9 @@
                 </colgroup>
                 <tbody>
                 <tr>
-                    <th>구분</th>
-                    <th>File Name</th>
-                    <th>등록일</th>
+                    <th>구분<span class="ico_arr"></span></th>
+                    <th>File Name<span class="ico_arr"></span></th>
+                    <th>등록일<span class="ico_arr"></span></th>
                 </tr>
                 <tr>
                     <td>A</td>
@@ -152,35 +154,35 @@
             <div class="Xray-thumbnail"><img src="../resource/images/service/xray_thumbnail.jpg"></div>
         </div>
         <ul class="disease-item">
-            <li class="item">
+            <li class="item on">
                 <div class="itembox">
                     <div class="value">충치 말줄임테스트입니다.</div>
                     <div class="chart"><span class="bar"></span></div>
                     <span class="percent">40%</span>
                 </div>
             </li>
-            <li class="item">
+            <li class="item on">
                 <div class="itembox">
                     <div class="value">풍치</div>
                     <div class="chart"><span class="bar"></span></div>
                     <span class="percent">40%</span>
                 </div>
             </li>
-            <li class="item">
+            <li class="item on">
                 <div class="itembox">
                     <div class="value">하악신경</div>
                     <div class="chart"><span class="bar"></span></div>
                     <span class="percent">40%</span>
                 </div>
             </li>
-            <li class="item">
+            <li class="item on">
                 <div class="itembox">
                     <div class="value">낭종</div>
                     <div class="chart"><span class="bar"></span></div>
                     <span class="percent">40%</span>
                 </div>
             </li>
-            <li class="item ">
+            <li class="item on">
                 <div class="itembox">
                     <div class="value">상악동</div>
                     <div class="chart"><span class="bar"></span></div>
@@ -188,6 +190,14 @@
                 </div>
             </li>
         </ul>
+        <div class="textBox">
+            <div class="user">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="comments">
+                <textarea rows="3" placeholder="Memo"></textarea>
+            </div>
+        </div>
     </div>
 
     </div>
@@ -198,6 +208,120 @@
 
 <script src="/dist/js/service.js"></script>
 
+<div class="remodal small" data-remodal-id="modalDel">
+    <div class="remodal-header">
+        <div class="title">파일을 삭제하시겠습니까?</div>
+        <button data-remodal-action="close" class="remodal-close"></button>
+    </div>
+    <div class="remodal-content">
+
+    </div>
+    <div class="remodal-footer">
+        <button type="button" class="btn-normal pop-btn btn-blu"><span>Ok</span></button>
+        <button type="button" class="btn-normal pop-btn btn-gry"><span>Cancel</span></button>
+    </div>
+</div>
+
+
+<div class="remodal" data-remodal-id="modal">
+    <div class="remodal-header">
+        <div class="title">파일을 저장하시겠습니까?</div>
+        <button data-remodal-action="close" class="remodal-close"></button>
+    </div>
+    <div class="remodal-content">
+
+        <div class="boxdep01">
+            <div class="radio-ui">
+                <input type="radio" id="test01">
+                <label for="test01">한 이미지에 판독 내용 모두 저장 </label>
+            </div>
+        </div>
+        <div class="boxdep02">
+            <div class="radio-ui">
+                <input type="radio" id="test02">
+                <label for="test02">모든 판독 저장</label>
+            </div>
+            <div class="radio-ui">
+                <input type="radio" id="test03">
+                <label for="test03">선택 판독만 저장</label>
+            </div>
+        </div>
+        <div class="boxdep03">
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test04">
+                <label for="test04">충치</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test05">
+                <label for="test05">풍치</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test06">
+                <label for="test06">하악신경</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test07">
+                <label for="test07">상악종</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test08">
+                <label for="test08">잇몸뼈라인</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test09">
+                <label for="test09">치아신경</label>
+            </div>
+        </div>
+
+        <div class="boxdep01 line">
+            <div class="radio-ui">
+                <input type="radio" id="test01">
+                <label for="test01">판독 항목별로 각각 저장</label>
+            </div>
+        </div>
+        <div class="boxdep02">
+            <div class="radio-ui">
+                <input type="radio" id="test02">
+                <label for="test02">모든 판독 각각 저장</label>
+            </div>
+            <div class="radio-ui">
+                <input type="radio" id="test03">
+                <label for="test03">선택 판독만 각각 저장</label>
+            </div>
+        </div>
+        <div class="boxdep03">
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test04">
+                <label for="test04">충치</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test05">
+                <label for="test05">풍치</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test06">
+                <label for="test06">하악신경</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test07">
+                <label for="test07">상악종</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test08">
+                <label for="test08">잇몸뼈라인</label>
+            </div>
+            <div class="checkbox-ui default">
+                <input type="checkbox" id="test09">
+                <label for="test09">치아신경</label>
+            </div>
+        </div>
+
+    </div>
+    <div class="remodal-footer">
+        <button type="button" class="btn-normal pop-btn btn-blu"><span>Ok</span></button>
+        <button type="button" class="btn-normal pop-btn btn-gry"><span>Cancel</span></button>
+    </div>
+</div>
 
 </body>
 </html>

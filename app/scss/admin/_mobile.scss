@@ -232,6 +232,10 @@
           position: relative;
           display: table;
         }
+        .title {
+          font-size: 12px;
+          width: 120px;
+        }
         .qty {
           display: none;
         }
@@ -483,6 +487,42 @@
       width: 280px;
     }
   }
+
+
+  .textBox {
+    background: #f1f1f1;
+    margin: 20px 0;
+    padding: 20px 15px;
+    min-height: inherit;
+    box-sizing: border-box;
+    border-top:1px solid #b8b8b8;
+    border-bottom:1px solid #b8b8b8;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .user {
+      width: 100%;
+      padding-right: 0;
+    }
+    .comments {
+      margin-top: 10px;
+      width: 100%;
+    }
+    input {
+      width: 100%;
+      border-color: #c2c2c2;
+    }
+    textarea {
+      width: 100%;
+      border-color: #c2c2c2;
+      resize: none;
+      padding: 10px;
+      line-height: 24px;
+    }
+  }
+
 
 
 }

@@ -56,7 +56,25 @@
   }
 }
 
-.fp-viewing-about {
+.section {
+  .title {
+    padding-top:150px;
+  }
+  .desc {
+    padding-top:30px;
+  }
+  .imgs, .upload, .sendForm {
+    margin-top:30px;
+  }
+  .slider {
+    margin-top:50px;
+  }
+}
+
+
+
+
+/*.fp-viewing-about {
   .gnb li {
     &:nth-of-type(1) a {
       color: #006cb8;
@@ -126,12 +144,13 @@
       transform: translate(0px, 0px);
     }
   }
-}
+}*/
 
 .fp-tableCell {
   vertical-align: inherit;
 }
 
+/*
 .about, .demo, .service, .blog, .contact {
   .title {
      margin-top: 160px;
@@ -152,6 +171,7 @@
   }
 }
 
+*/
 
 
 
@@ -161,6 +181,7 @@
 
 
 
+/*
 
 .fp-destroyed {
   .home {
@@ -258,4 +279,4 @@
     opacity: 1;
     transform: translate(0px, 0px);
   }
-}
+}*/

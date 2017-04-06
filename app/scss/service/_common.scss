@@ -13,6 +13,7 @@ footer, header, nav, section{
 body{
   position:relative;
   height: 100%;
+  min-width: 1280px;
   background:#212121;
 }
 a{
@@ -56,8 +57,13 @@ button {
 }
 .bodyContainer {
   position: relative;
-  min-height:  calc(100% - 90px);
-  height: 100%;
+  min-height:  100%;
+  overflow: hidden;
+  &:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
 }
 nav {
   width: 100%;
@@ -145,8 +151,11 @@ button span{
   vertical-align: middle;
   cursor: pointer;
 }
+.filter .btn-wrap {
+  float: right;
+}
 .btn-wrap{
-  float:right;
+ text-align: right;
 }
 .btn-wrap .del-btn{
   margin-left: 10px;
@@ -188,6 +197,18 @@ button span{
   height: calc(100% - 90px);
   background-color: #000;
   transition: 0.5s all ease;
+  position: relative;
+  &:before {
+    content: '';
+    background-color: #000;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 200%;
+  }
   &.min {
     transform: translate(-360px, 0);
     + .left-inter-section{
@@ -242,10 +263,13 @@ button span{
   }
 }
 .contents{
-  padding:30px 0 0 60px;
+  padding:30px 0 0 110px;
   float:left;
   width:calc(100% - 420px);
   transition: 0.5s all ease;
+  &.upload {
+    padding:30px 0 0 60px;
+  }
 }
 .input-wrap{
  width:246px;
@@ -275,6 +299,19 @@ table {
   color:#fff;
   border-left: 1px solid #292929;
   border-bottom: 1px solid #3c3c3c;
+  font-size:14px;
+}
+.board-type1 .ico_arr{
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-image: url("../resource/images/service/ico_arr.png");
+  background-repeat: no-repeat;
+  margin-left: 6px;
+  cursor: pointer;
+}
+.board-type1 .ico_arr.down {
+  transform: rotate(180deg);
 }
 .board-type1 th:first-child, .board-type1 td:first-child{
   border-left:0!important;
@@ -297,7 +334,7 @@ table {
   color:#d7d7d7;
 }
 .board-type1 th, .board-type1 td{
-  padding: 12px 10px;
+  padding: 12px 8px;
 }
 .table-paging-wrap{
   position:relative;
@@ -326,7 +363,6 @@ table {
   display: inline-block;
   width: 30px;
   height: 30px;
-  margin: 0 -3px;
   line-height: 27px;
   color: #444;
   font-size: 16px;
@@ -393,7 +429,6 @@ table {
 
 //image
 .Xray{
-  float: left;
   position:relative;
   width: 100%;
   margin-top:20px;
@@ -412,6 +447,11 @@ table {
 }
 .disease-item{
   margin-top:30px;
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 .disease-item:before{
   content: "";
@@ -445,13 +485,25 @@ table {
     border:1px solid #fff;
     font-weight: bold;
   }
+  &.on .percent {
+    display: inline-block!important;
+  }
   .itembox {
     padding:16px 16px;
     border: 1px solid #444;
     width: 100%;
+    box-sizing: border-box;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
     .value {
+      float: left;
       display: inline-block;
-      width: 40%;
+      box-sizing: border-box;
+      width: 50%;
+      //width: calc(50% - 10px);
       padding-right: 10px;
       text-overflow:ellipsis;
       white-space:nowrap;
@@ -462,8 +514,10 @@ table {
       color:#d1d1d1;
     }
     .chart {
+      float: left;
       display: inline-block;
-      width: 35%;
+      width: calc(50% - 40px);
+      margin-top: 4px;
       background-color: #363636;
       border-radius: 18px;
       height: 12px;
@@ -477,10 +531,11 @@ table {
       }
     }
     .percent{
-      padding-left: 10px;
+      position: absolute;
+      top:24px;
+      right:20px;
       vertical-align: middle;
-      display: inline-block;
-      width: 20%;
+      box-sizing: border-box;
       font-size:14px;
       font-weight: bold;
       display: none;
@@ -730,4 +785,109 @@ table {
 
 .datepicker-panel>ul>li {
   color:#444;
+}
+
+.textBox {
+  background: rgba(28,28,28,.8);
+  margin: 30px 0;
+  padding: 30px;
+  min-height: 160px;
+  box-sizing: border-box;
+  border-top:1px solid #000;
+  border-bottom:1px solid #000;
+  &:after {
+    content: '';
+    display: inline-block;
+    clear: both;
+  }
+  .user {
+    float: left;
+    width: 300px;
+    padding-right: 14px;
+  }
+  .comments {
+    float: left;
+    width: calc(100% - 300px);
+  }
+  input {
+    width: 100%;
+    border-color: #525252;
+  }
+  textarea {
+    width: 100%;
+    border-color: #525252;
+    resize: none;
+    padding: 10px;
+    line-height: 24px;
+  }
+}
+
+
+/*checkbox*/
+.checkbox-ui {
+  position: relative;
+  &.default {
+    [type=checkbox] {
+      &:checked {
+        + label {
+          background-image: url("../resource/images/admin/check_on.png");
+        }
+      }
+      + label {
+        background-image: url("../resource/images/admin/check_off.png");
+      }
+    }
+  }
+  [type=checkbox] {
+    opacity: .0;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 26px;
+    height: 26px;
+    &:checked {
+      + label {
+        padding-left: 30px;
+        background-image: url("../resource/images/admin/login_check_on.png");
+        background-repeat: no-repeat;
+      }
+    }
+    + label {
+      cursor: pointer;
+      padding-left: 30px;
+      background-image: url("../resource/images/admin/login_check_off.png");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.radio-ui {
+  position: relative;
+  [type=radio] {
+    opacity: .0;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 26px;
+    height: 26px;
+    &:checked {
+      + label {
+        padding-left: 30px;
+        background-image: url("../resource/images/admin/radio_on.png");
+        background-repeat: no-repeat;
+      }
+    }
+    + label {
+      cursor: pointer;
+      padding-left: 30px;
+      background-image: url("../resource/images/admin/radio_off.png");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.remodal {
+  label {
+    color: #444;
+  }
 }

@@ -1,11 +1,22 @@
 $(document).ready(function() {
 
    //image detail
+    $('.item').each(function (value, i) {
+        console.log(value)
+        if ($(this).hasClass('on')) {
+            $(this).find('.bar').attr('style', 'width: 40%;background-color: #ff0000');
+        } else {
+            $(this).find('.bar').attr('style', 'width: 40%;background-color: transparent');
+        }
+    });
 
     $('.item').click(function() {
-        $(this).addClass('on')
-        $(this).find('.bar').attr('style', 'width: 40%;background-color: #ff0000');
-        $(this).find('.percent').css('display', 'inline-block');
+        $(this).toggleClass('on');
+        if ($(this).hasClass('on')) {
+            $(this).find('.bar').attr('style', 'width: 40%;background-color: #ff0000');
+        } else {
+            $(this).find('.bar').attr('style', 'width: 40%;background-color: transparent');
+        }
     });
 
 

@@ -11,17 +11,15 @@
     font-size: 58px;
     span {font-weight: bold}
     transition: .9s cubic-bezier(.4,.38,0,1.19);
-    opacity: 0;
   }
 }
 
 .slider {
   transition: 1.4s cubic-bezier(.4,.38,0,1.19);
-  transform: translate(0px, 200px);
-  opacity: 0;
+  //transform: translate(0px, 200px);
   width: 80%;
   max-width: 1250px;
-  margin: 100px auto 0px auto;
+  margin: 0px auto 0px auto;
 }
 
 .sliderItem {
@@ -62,10 +60,8 @@
 .fp-viewing-blog {
   .blog {
     .title {
-      opacity: 1;
     }
     .slider {
-      opacity: 1;
       margin-bottom: 0;
     }
   }

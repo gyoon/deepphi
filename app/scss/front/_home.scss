@@ -42,7 +42,6 @@
   position: absolute;
   top:300px;
   left:100px;
-  opacity: 0;
   transition: .6s cubic-bezier(.4,.38,0,1.19);
   color: #00142b;
   font-size: 50px;
@@ -53,9 +52,6 @@
 .fp-viewing-home {
   .homeDesc {
     position: absolute;
-    //top:300px;
-    //left:160px;
-    opacity: 1;
   }
   .uiHand {
     //transform: translate(0px, 200px);

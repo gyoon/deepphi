@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width">
     <!-- bower:css -->
     <!-- endinject -->
+    <link rel="stylesheet" href="/dist/lib/remodal/dist/remodal.css">
+    <link rel="stylesheet" href="/dist/lib/remodal/dist/remodal-default-theme.css">
     <link rel="stylesheet" href="/dist/css/service.css">
     <!-- inject:css -->
     <!-- endinject -->
@@ -62,9 +64,9 @@
             <span class="file-size">2KB</span>
         </div>
     </div>
-    <div class="contents">
+    <div class="contents upload">
         <div class="btn-wrap">
-            <button type="button" class="btn-normal upload-btn btn-gry" data-remodal-target="modal"><span>Upload</span></button>
+            <button type="button" class="btn-normal upload-btn btn-gry" data-remodal-target="modalupload"><span>Upload</span></button>
         </div>
         <div class="Xray">
             <img src="../resource/images/service/xray.jpg">
@@ -77,6 +79,21 @@
 
 <script src="/dist/lib/jquery/jquery.min.js"></script>
 <script src="/dist/lib/remodal/dist/remodal.js"></script>
+
+
+<div class="remodal small" data-remodal-id="modalupload">
+    <div class="remodal-header">
+        <div class="title">파일을 업로드 하시겠습니까?</div>
+        <button data-remodal-action="close" class="remodal-close"></button>
+    </div>
+    <div class="remodal-content">
+
+    </div>
+    <div class="remodal-footer">
+        <button type="button" class="btn-normal pop-btn btn-blu"><span>Ok</span></button>
+        <button type="button" class="btn-normal pop-btn btn-gry"><span>Cancel</span></button>
+    </div>
+</div>
 
 
 </body>

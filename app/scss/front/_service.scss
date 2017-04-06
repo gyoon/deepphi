@@ -6,14 +6,12 @@
     font-size: 58px;
     span {font-weight: bold}
     transition: .9s cubic-bezier(.4,.38,0,1.19);
-    opacity: 0;
   }
 }
 
 .fp-viewing-service {
   .service {
     .title {
-      opacity: 1;
     }
   }
 }

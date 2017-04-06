@@ -308,6 +308,13 @@ nav {
   position: relative;
   display: table;
 }
+
+.filter .search .title {
+  padding-right: 16px;
+  font-size: 18px;
+  display: table-cell;
+}
+
 .select-wrap,.input-wrap {
   padding-right: 6px;
   display: table-cell;
@@ -403,7 +410,6 @@ table {
   display: inline-block;
   width: 34px;
   height: 34px;
-  margin: 0 -3px;
   line-height: 32px;
   color: #444;
   font-size: 16px;
