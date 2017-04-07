@@ -151,10 +151,10 @@ gulp.task('inject', function () {
  10. serve
  **********************************************************************************/
 
-gulp.task('serve', ['resource', 'javascript', 'sass', 'html', 'inject'], function () {
+gulp.task('serve', ['resource', 'javascript', 'sass', 'html'], function () {
     return browserSync.init({
         port : 3000,
-        server: "./",
+        server: "./dist",
         baseDir: "./",
         routes: {
             "/dist/": "../"
@@ -172,13 +172,13 @@ gulp.slurped = false; // step 1
 gulp.task("watch", function(){
     if(!gulp.slurped){ // step 2
         gulp.watch(['gulpfile.js'], ['serve']);
-        gulp.watch(target.sassSrc, ['sass', 'inject']);
-        gulp.watch(target.resourceSrc, ['resource', 'inject']);
-        gulp.watch(target.jsSrc, ['javascript', 'inject']);
-        gulp.watch(target.indexSrc, ['html', 'inject']);
-        gulp.watch(target.adminSrc, ['html', 'inject']);
-        gulp.watch(target.serviceSrc, ['html', 'inject']);
-        gulp.watch(target.htmlSrc, ['html', 'inject']);
+        gulp.watch(target.sassSrc, ['sass']);
+        gulp.watch(target.resourceSrc, ['resource']);
+        gulp.watch(target.jsSrc, ['javascript']);
+        gulp.watch(target.indexSrc, ['html']);
+        gulp.watch(target.adminSrc, ['html']);
+        gulp.watch(target.serviceSrc, ['html']);
+        gulp.watch(target.htmlSrc, ['html']);
         gulp.slurped = true; // step 3
     }
 });

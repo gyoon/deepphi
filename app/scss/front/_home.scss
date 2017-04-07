@@ -8,16 +8,64 @@
 }
 
 .uiHand {
-  background-image: url("../resource/images/front/hand.png");
+  background-image: url("../resource/images/front/vis_hand.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom right;
   width: 100%;
   height: 100%;
   position: absolute;
-  bottom: -23%;
-  //transform: translate(0px, 300px);
+  bottom: -0;
   transition: .6s cubic-bezier(.4,.38,0,1.19);
+}
+
+.uipad {
+  background-image: url("../resource/images/front/pad.png");
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  transition: .6s cubic-bezier(.4,.38,0,1.19);
+}
+
+
+.uivis {
+  background-image: url("../resource/images/front/vis01.png");
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  transition: .6s cubic-bezier(.4,.38,0,1.19);
+  -webkit-animation:imgchange 11s linear infinite;
+  -moz-animation:imgchange 11s linear infinite;
+  animation:imgchange 11s linear infinite;
+}
+
+@-moz-keyframes imgchange {
+  0% { background-image: url("../resource/images/front/vis01.png"); }
+  33% { background-image: url("../resource/images/front/vis02.png"); }
+  66% { background-image: url("../resource/images/front/vis03.png"); }
+  100% { background-image: url("../resource/images/front/vis01.png"); }
+}
+@-webkit-keyframes imgchange {
+  0% { background-image: url("../resource/images/front/vis01.png"); }
+  33% { background-image: url("../resource/images/front/vis02.png"); }
+  66% { background-image: url("../resource/images/front/vis03.png"); }
+  100% { background-image: url("../resource/images/front/vis01.png"); }
+}
+@keyframes imgchange {
+  0% { background-image: url("../resource/images/front/vis01.png"); }
+  33% { background-image: url("../resource/images/front/vis02.png"); }
+  66% { background-image: url("../resource/images/front/vis03.png"); }
+  100% { background-image: url("../resource/images/front/vis01.png"); }
 }
 
 .mouse {
