@@ -320,17 +320,27 @@
     .footer {
       padding: 10px 20px;
       height: 100px;
-      flex-wrap: wrap;
+      display: table;
       li {
+        padding-left: 35px;
+        display: table-cell;
+        width: 40%;
+        position: relative;
         margin: 5px 0px;
-        transform: scale(.9);
+        transform: scale(1);
         font-size: 10px;
-        line-height: 12px;
+        line-height: 24px;
+        text-align: left;
+        &:nth-of-type(2) {
+          width: 60%;
+        }
         a {
           font-size: 10px;
         }
         .icon {
-          margin-right: 4px;
+          position: absolute;
+          left: 0;
+          top:0;
           background-size: 50%;
           width: 25px;
           height: 25px;
@@ -342,30 +352,31 @@
   .about, .demo, .service, .blog, .contact {
     .title {
       margin-top: 0px;
-      padding-top: 90px;
+      padding-top: 80px;
       font-size: 24px;
       span {
         font-size: 24px;
       }
     }
     .imgs {
-      margin-top: 40px;
+      margin-top: 30px;
       background-size: 70%;
     }
     .desc {
       font-size: 13px;
-      margin-top: 15px;
+      margin-top: 0px;
+      padding-top: 20px;
       span {
         font-size: 13px;
       }
     }
     .upload {
-      margin: 20px auto 0 auto;
+      margin: 30px auto 0 auto;
       position: relative;
     }
     .slider {
       width: 100%;
-      margin: 45px auto 0 auto;
+      margin: 30px auto 0 auto;
       .sliderItem {
         background-image: none;
       }

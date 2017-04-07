@@ -5,6 +5,9 @@ $(document).ready(function() {
     createFullpage();
 
     function createFullpage() {
+        $('.section').each(function( index ) {
+            $(this).attr('id', '').attr('style', '')
+        });
         if(fullPageCreated === false) {
             fullPageCreated = true;
             $('#fullpage').fullpage({
@@ -22,15 +25,12 @@ $(document).ready(function() {
         } else {
             fullPageCreated = false;
             $.fn.fullpage.destroy('all');
-
             var sectionH =  $(window).height();
             $('.section').css('height', sectionH);
-
             $('.section').each(function( index ) {
                 var value = $(this).attr('class').substring(8);
                 $(this).attr('id', value)
             });
-
         }
     });
 
