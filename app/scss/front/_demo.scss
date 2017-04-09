@@ -17,36 +17,93 @@
     span {color: #006cb8; font-size: 22px;}
   }
 
-  .upload {
-    transition: 1.4s cubic-bezier(.4,.38,0,1.19);
-    width: 80%;
-    max-width: 1250px;
+  .toggle-box {
+    position: absolute;
+    right: 40px;
+    top: -50px;
+    button{
+      font-size: 18px;
+      color: #444444;
+      border: 1px solid #444;
+      padding: 8px 4px;
+      min-width: 130px;
+      min-height: 40px;
+      margin-left: 10px;
+      background-color: #eaeaea;
+      outline: 0;
+      &.active {
+        border: 2px solid #006cb8;
+        color: #006cb8;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .upload-box {
+    max-width: 1500px;
+    padding: 0 40px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    .qq-uploader {
-      min-height: 443px;
-    }
-    .fine-uploader-gallery {
-      margin-right: 10px;
+  }
+
+  .upload {
+    position: relative;
+    transition: 1.4s cubic-bezier(.4,.38,0,1.19);
+    max-width: 1500px;
+    padding: 0 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+
+    #fine-uploader-gallery {
+      height: 100%;
       padding: 6px;
       background-color: #ffffff;
-      float: left;
+    }
+
+    .fine-uploader-gallery {
+      min-width: 330px;
+      height: 100%;
+      padding-right: 10px;
+      display: table-cell;
+      vertical-align: top;
+      .ex {
+        color: #c7000b;
+        margin-top: -30px;
+        padding-right: 17px;
+        width: 100%;
+        text-align: right;
+      }
     }
     .upload-view {
-      float: left;
-      width: 800px;
-      height: 456px;
+      width: calc(100% - 330px);
+     img {
+       width: 100%;
+       max-width: 1160px;
+     }
+      display: table-cell;
       border: 1px #c8c8c8 solid;
       font-size: 22px;
       text-align: center;
       color: #262626;
-      line-height: 456px;
-      background-image: url("../resource/images/front/upload_default.png");
-      background-size: 100%;
+      position: relative;
+      .default {
+        position: absolute;
+        top:50%;
+        left:0;
+        width: 100%;
+        text-align: center;
+        margin-top: -50px;
+      }
       .progress {
+        position: absolute;
         opacity: 0;
-        margin: -200px auto;
         border-radius: 8px;
+        top:50%;
+        left:50%;
+        margin-top: -5px;
+        margin-left: -165px;
         width: 330px;
         height: 10px;
         background-color: #c1c1c1;
@@ -57,6 +114,7 @@
           background-color: #006cb8;
         }
       }
+
       .upcomp {
         display: none;
       }
@@ -72,6 +130,46 @@
     .desc {
     }
     .upload {
+    }
+  }
+}
+
+/*checkbox*/
+.checkbox-ui {
+  position: relative;
+  &.default {
+    [type=checkbox] {
+      &:checked {
+        + label {
+          background-image: url("../resource/images/front/check_on.png");
+        }
+      }
+      + label {
+        font-size: 15px;
+        line-height: 20px;
+        background-image: url("../resource/images/front/check_off.png");
+      }
+    }
+  }
+  [type=checkbox] {
+    opacity: .0;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 26px;
+    height: 26px;
+    &:checked {
+      + label {
+        padding-left: 30px;
+        background-image: url("../resource/images/front/login_check_on.png");
+        background-repeat: no-repeat;
+      }
+    }
+    + label {
+      cursor: pointer;
+      padding-left: 30px;
+      background-image: url("../resource/images/front/login_check_off.png");
+      background-repeat: no-repeat;
     }
   }
 }

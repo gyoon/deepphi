@@ -59,15 +59,19 @@
 .section {
   .title {
     padding-top:150px;
+    font-weight: bold;
   }
   .desc {
-    padding-top:30px;
+    padding-top:20px;
   }
-  .imgs, .upload, .sendForm {
-    margin-top:100px;
+  .imgs {
+    margin-top:60px;
+  }
+  .upload, .sendForm {
+    margin-top:60px;
   }
   .slider {
-    margin-top:100px;
+    margin-top:60px;
   }
 }
 

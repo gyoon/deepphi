@@ -87,7 +87,8 @@ $(document).ready(function() {
                 {
                     complete: function(){
                         $(".progress").css('display', 'none');
-                        $(".default").css('display', 'none');
+                        $(".upload-view .default").css('display', 'none');
+                        $(".updefault").css('display', 'none');
                         $(".upcomp").css('display', 'block');
                     }
                 }
@@ -109,11 +110,21 @@ $(document).ready(function() {
         })
     });
 
+    $(".menu").click(function() {
+        $('.menu-trigger').trigger('click');
+    });
+
 
     //modal
     var modalHeight = $(window).height();
 
     $(".scrollDiv").css('height', modalHeight - 100);
+
+    //demo toggle
+    $(".toggle-box .toggle").click(function() {
+        $(".toggle-box .toggle").removeClass( "active" );
+        $( this ).toggleClass( "active" );
+    });
 
 
 });

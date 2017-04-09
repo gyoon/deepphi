@@ -19,12 +19,6 @@
 .qq-total-progress-bar-container {
   width: 500px;
 }
-
-#fine-uploader-gallery {
-  height: 100%;
-  min-width: 400px;
-}
-
 .qq-upload-button {
   display: block;
   width: inherit;
@@ -88,12 +82,20 @@
 .qq-upload-list li.qq-upload-fail {
   background-color: transparent;
   border: 0;
+  padding: 0;
+}
+.qq-upload-size {
+  display: inline-block;
+}
+
+.qq-file-info {
+  overflow: hidden;
 }
 
 .qq-upload-file {
   vertical-align: middle;
   display: inline-block;
-  width: 300px;
+  width: inherit;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow-x: hidden;

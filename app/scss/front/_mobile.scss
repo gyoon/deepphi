@@ -155,42 +155,97 @@
     max-width: 100%;
   }
 
-  #fine-uploader-gallery {
+  .demo .upload #fine-uploader-gallery {
     height: 100%;
     min-width: 100%;
     width: 100%;
+    padding: 0;
   }
 
   .demo .upload .upload-view {
-    flex: inherit;
     float: none;
     width: 100%;
-    height: 170px;
-    line-height: 140px;
     .upcomp {width: 100%}
   }
 
   .demo {
+    .upload {
+      padding: 0 20px;
+      .upload-view .default {
+        position: absolute;
+        margin-top: -7px;
+        font-size: 14px;
+        line-height: normal;
+      }
+    }
+    .toggle-box {
+      position: absolute;
+      top: -40px;
+      right: 20px;
+      button{
+        font-size: 13px;
+        color: #444444;
+        border: 1px solid #444;
+        padding: 8px 4px;
+        min-width: 75px;
+        min-height: 25px;
+        margin-left: 5px;
+        background-color: #eaeaea;
+        outline: 0;
+        &.active {
+          border: 2px solid #006cb8;
+          color: #006cb8;
+          font-weight: bold;
+        }
+      }
+    }
+
+
     .upload .upload-view .progress {
       opacity: 0;
-      margin: -50px auto;
+      margin: 20px auto;
       border-radius: 8px;
       width: 250px;
       height: 10px;
       background-color: #c1c1c1;
+      margin-left: -125px;
     }
 
 
     .fine-uploader-gallery {
       position: absolute;
       margin: 0;
-      top: 185px;
+      top: 174px;
+    }
+
+    .upload .fine-uploader-gallery .ex {
+      color: #c7000b;
+      margin-top: -70px;
+      padding-right: 0px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .qq-file-info {
+      margin-top: -10px;
+    }
+
+    .upload-box {
+      margin-top:130px;
+      padding: 0 20px;
+      label {
+        font-size: 12px!important;
+      }
+    }
+
+    .upload #fine-uploader-gallery {
+      background-color: transparent;
     }
 
     .upload .fine-uploader-gallery {
       margin-right: 0;
       padding: 0;
-      width: 100%;
+      width: calc(100% - 40px);
       background-color: transparent;
       float: none;
     }
@@ -371,7 +426,7 @@
       }
     }
     .upload {
-      margin: 30px auto 0 auto;
+      margin: 60px auto 0 auto;
       position: relative;
     }
     .slider {
