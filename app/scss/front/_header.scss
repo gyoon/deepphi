@@ -16,7 +16,7 @@
 
 .header {
   font-size: 14px;
-  height: 90px;
+  height: 80px;
   background-color: rgba(255, 255, 255, 1);
   border-bottom: 1px #dfe0e1 solid;
   position: fixed;
@@ -28,27 +28,30 @@
     display: block;
     float:left;
     background-image: url("../resource/images/front/logo.png");
-    width: 234px;
-    height: 46px;
-    background-size: 234px 46px;
+    width: 238px;
+    height: 48px;
+    background-size: 238px 48px;
     transition: .6s cubic-bezier(.4,.38,0,1.19);
     background-repeat: no-repeat;
-    margin-left: 55px;
-    margin-top: 20px;
+    margin-left: 40px;
+    margin-top: 16px;
   }
   .gnb {
-    line-height: 90px;
+    line-height: 80px;
     vertical-align: middle;
     float:right;
     li {
       display: inline-block;
-      &:last-child {a {margin-right: 55px;}}
+      &:last-child {a {margin-right: 40px;}}
       a {
         color: #202020;
         margin: 0 25px;
         font-size: 24px;
         text-decoration: none;
         &:hover {
+          color: #006cb8;
+        }
+        &.active {
           color: #006cb8;
         }
       }
@@ -58,14 +61,14 @@
 
 .section {
   .title {
-    padding-top:150px;
+    margin-top:140px;
     font-weight: bold;
   }
   .desc {
-    padding-top:20px;
+    margin-top:20px;
   }
   .imgs {
-    margin-top:60px;
+    margin-top:50px;
   }
   .upload, .sendForm {
     margin-top:60px;
@@ -75,8 +78,17 @@
   }
 }
 
+.section.about{
+  .title{
+    font-weight: normal;
+  }
+}
 
-
+.fp-viewing-about {.header .gnb li.menu-about a { color: #006cb8;}}
+.fp-viewing-demo {.header .gnb li.menu-demo a { color: #006cb8;}}
+.fp-viewing-service {.header .gnb li.menu-service a { color: #006cb8;}}
+.fp-viewing-blog {.header .gnb li.menu-blog a { color: #006cb8;}}
+.fp-viewing-contact {.header .gnb li.menu-contact a { color: #006cb8;}}
 
 /*.fp-viewing-about {
   .gnb li {

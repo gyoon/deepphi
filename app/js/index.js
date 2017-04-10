@@ -42,6 +42,7 @@ $(document).ready(function() {
         //dots: true,
         slidesToScroll: 1,
         autoplay: false,
+        dots: true,
         responsive: [
             {
                 breakpoint: 980,
@@ -118,7 +119,21 @@ $(document).ready(function() {
     //modal
     var modalHeight = $(window).height();
 
-    $(".scrollDiv").css('height', modalHeight - 100);
+    if ($(window).width() <= 500) {
+        $(".scrollDiv").css('height', modalHeight);
+    } else if($(window).width() <= 979) {
+        $(".scrollDiv").css('height', modalHeight - 100);
+    } else if($(window).width() <= 1214) {
+        $(".scrollDiv").css('height', modalHeight - 300);
+    } else {
+        $(".scrollDiv").css('height', modalHeight - 300);
+    }
+
+    $(document).on('click', '.sliderItem', function() {
+        $.fn.fullpage.setAllowScrolling(false);
+        $.fn.fullpage.setKeyboardScrolling(false);
+    });
+
 
     //demo toggle
     $(".toggle-box .toggle").click(function() {

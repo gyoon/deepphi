@@ -1,5 +1,58 @@
 @media screen and (max-width: 500px) /* Mobile */ {
 
+  .remodal-wrapper {
+    padding: 0;
+  }
+  .remodal {
+    margin: 0;
+    padding-top: 40px;
+    height: 100%;
+  }
+
+  .remodal-close {
+    right: 10px;
+    top: 4px;
+  }
+
+  .remodal-close:before {
+    color:#000;
+    font-size: 30px;
+  }
+
+  .remodal, .remodal-wrapper:after {
+    vertical-align: top;
+  }
+
+  .remodal {
+    padding:40px 0px 20px 20px;
+    &.blogmodal {
+      max-width: 760px;
+    }
+    img {
+      width: 100%;
+    }
+    h3 {
+      margin: 15px 0;
+      font-size: 20px;
+      color: #000;
+      line-height: 160%;
+      text-align: left;
+      font-weight: bold;
+    }
+    .descpan {
+      border-top: 1px solid #d1d1d1;
+      margin: 25px 0 0 0;
+      padding-top: 20px;
+      line-height: 160%;
+      text-align: left;
+      overflow:hidden;
+      font-size: 16px;
+    }
+    .share {
+      padding-bottom: 60px;
+    }
+  }
+
   .onlyMb {display: none}
 
   .menu-trigger {
@@ -86,11 +139,11 @@
       }
     }
     .logo {
-      width: 140px;
-      height: 25px;
+      width: 139px;
+      height: 28px;
       margin: 15px auto;
       float: none;
-      background-size: 140px 25px;
+      background-size: 139px 28px;
     }
     .nav {
       position: fixed;
@@ -101,29 +154,27 @@
 
   .home {
     .uiHand {
-      left: -45%;
-      bottom: 50%;
+      left: -42%;
+      bottom: 47%;
       transform: scale(2);
     }
 
-
     .uipad {
-      left: -45%;
-      bottom: 45%;
+      left: -42%;
+      bottom: 43%;
       transform: scale(1.6);
     }
 
-
     .uivis {
-      left: -45%;
-      bottom: 45%;
+      left: -42%;
+      bottom: 43%;
       transform: scale(1.6);
     }
 
     .mouse {
       text-align: center;
-      width: 30px;
-      background-size: 22px auto;
+      width: 32px;
+      background-size: 32px auto;
       height: 90px;
       position: absolute;
       bottom: 0;
@@ -144,15 +195,22 @@
       color: #00142b;
       font-size: 23px;
       font-weight: bold;
-      line-height: 160%;
+      line-height: 150%;
       top: 90px;
       left:0;
       text-align: center;
     }
   }
-
+  .about{
+    background-image: url(../resource/images/front/about_mobile.png);
+  }
   .demo .upload {
     max-width: 100%;
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
   }
 
   .demo .upload #fine-uploader-gallery {
@@ -215,12 +273,12 @@
     .fine-uploader-gallery {
       position: absolute;
       margin: 0;
-      top: 174px;
+      top: 102%;
     }
 
     .upload .fine-uploader-gallery .ex {
       color: #c7000b;
-      margin-top: -70px;
+      margin-top: 0px;
       padding-right: 0px;
       width: 100%;
       text-align: left;
@@ -235,6 +293,8 @@
       padding: 0 20px;
       label {
         font-size: 12px!important;
+        background-size: 18px;
+        padding-left: 25px;
       }
     }
 
@@ -246,6 +306,8 @@
       margin-right: 0;
       padding: 0;
       width: calc(100% - 40px);
+      height: 100px;
+      min-width: inherit;
       background-color: transparent;
       float: none;
     }
@@ -373,8 +435,8 @@
       }
     }
     .footer {
-      padding: 10px 20px;
-      height: 100px;
+      padding: 6px 20px;
+      height: 80px;
       display: table;
       li {
         padding-left: 35px;
@@ -406,21 +468,19 @@
 
   .about, .demo, .service, .blog, .contact {
     .title {
-      margin-top: 0px;
-      padding-top: 80px;
+      margin-top: 80px;
       font-size: 24px;
       span {
         font-size: 24px;
       }
     }
     .imgs {
-      margin-top: 30px;
+      margin-top: 20px;
       background-size: 70%;
     }
     .desc {
       font-size: 13px;
-      margin-top: 0px;
-      padding-top: 20px;
+      margin-top: 10px;
       span {
         font-size: 13px;
       }
@@ -444,22 +504,24 @@
         padding: 6px 12px;
         font-size: 13px;
         box-sizing: border-box;
+        line-height: 18px;
       }
       textarea {
-        height: 70px;
+        height: 94px;
+        line-height: 20px;
       }
       .textType .nameError {
         right: 9px;
-        top: 13px;
+        top: 15px;
         font-size: 10px;
       }
     }
     .btnForm {
-      margin-top: 10px;
+      margin-top: 5px;
       padding: 0 20px;
       button {
         min-width: 100%;
-        min-height: 40px;
+        min-height: 38px;
         color: #fff;
         border-radius: 4px;
         font-size: 14px;

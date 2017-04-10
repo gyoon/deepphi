@@ -8,7 +8,7 @@
   .title {
     text-align: center;
     color: #fff;
-    font-size: 58px;
+    font-size: 64px;
     span {font-weight: bold}
     transition: .9s cubic-bezier(.4,.38,0,1.19);
   }
@@ -34,7 +34,7 @@
     }
     input {
       width: 100%;
-      padding: 12px 20px;
+      padding: 16px 20px;
       border: 0;
       border-radius: 4px;
       box-sizing: border-box;
@@ -49,9 +49,10 @@
       border-radius: 4px;
       resize: none;
       box-sizing: border-box;
-      height: 184px;
+      height: 208px;
       font-size: 18px;
       color: #202020;
+      line-height: 26px;
     }
     .textType {
       width: 50%;
@@ -61,7 +62,7 @@
       .nameError {
         position: absolute;
         right: 30px;
-        top: 26px;
+        top: 33px;
         font-size: 14px;
         color: #006cb8;
       }
@@ -86,7 +87,7 @@
       border-radius: 24px;
       background-color: #006cb8;
       min-width: 250px;
-      min-height: 46px;
+      min-height: 50px;
       color: #fff;
       font-size: 22px;
     }
@@ -139,10 +140,12 @@
       align-items: center;
       align-content: center;
       text-align: center;
+      font-size:16px;
     }
     a {
       text-decoration: none;
       color:#fff;
+      font-size:16px;
     }
   }
 }

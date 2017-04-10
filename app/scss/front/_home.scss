@@ -9,7 +9,7 @@
 
 .uiHand {
   background-image: url("../resource/images/front/vis_hand.png");
-  background-size: 85%;
+  background-size: 83%;
   background-repeat: no-repeat;
   background-position: bottom right;
   width: 100%;
@@ -97,7 +97,21 @@
   .homeDesc {
     position: absolute;
   }
-  .uiHand {
-    //transform: translate(0px, 200px);
+
+  .header {
+    height: 110px;
+    background-color: rgba(255, 255, 255, .4);
+    transition: .6s cubic-bezier(.4,.38,0,1.19);
+    .logo {
+      width: 340px;
+      height: 70px;
+      background-size: 340px 70px;
+      transition: .6s cubic-bezier(.4,.38,0,1.19);
+    }
+    .gnb {
+      line-height: 110px;
+      transition: .6s cubic-bezier(.4,.38,0,1.19);
+    }
   }
+
 }
